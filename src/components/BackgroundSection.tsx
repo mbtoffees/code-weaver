@@ -13,7 +13,7 @@ const BackgroundSection = () => {
 
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            Brooker Systems is led by an <span className="text-foreground font-medium">Electrical Engineer</span> with 
+            Brooker Systems is led by <span className="text-foreground font-medium">Max Brooker</span>, an <span className="text-foreground font-medium">Electrical Engineer</span> with 
             a background in <span className="text-foreground font-medium">Cybersecurity</span>. 
           </p>
           

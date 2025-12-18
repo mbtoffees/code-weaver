@@ -31,7 +31,7 @@ const FooterSection = () => {
 
         <div className="mt-20 pt-8 border-t border-border">
           <p className="font-mono text-xs text-muted-foreground">
-            © 2026 Brooker Systems — All rights reserved.
+            © 2025 Brooker Systems — All rights reserved.
           </p>
         </div>
       </div>

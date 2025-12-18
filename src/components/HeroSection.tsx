@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="min-h-[70vh] flex items-center justify-center px-4 py-16">
       <div className="container max-w-4xl text-center">
         <h1 
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 opacity-0 animate-fade-up"
@@ -33,20 +33,6 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <div 
-          className="mt-20 flex justify-center gap-2 text-muted-foreground/50 opacity-0 animate-fade-up"
-          style={{ animationDelay: "0.7s" }}
-        >
-          <span className="font-mono text-xs">scroll</span>
-          <svg 
-            className="w-4 h-4 animate-bounce" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
       </div>
     </section>
   );

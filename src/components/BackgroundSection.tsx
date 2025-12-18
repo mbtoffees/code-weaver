@@ -7,18 +7,21 @@ const BackgroundSection = () => {
             // Background
           </h2>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            Built on Engineering Principles.
+            Built by Max Brooker.
           </h3>
         </div>
 
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-left">
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            Brooker Systems is led by <span className="text-foreground font-medium">Max Brooker</span>, an <span className="text-foreground font-medium">Electrical Engineer</span> with 
-            a background in <span className="text-foreground font-medium">Cybersecurity</span>. 
+            <span className="text-foreground font-medium">Max</span> is an <span className="text-foreground font-medium">Electrical Engineer</span> by trade with a lifelong passion for technology.
           </p>
           
-          <p className="text-foreground font-medium text-lg sm:text-xl mb-8">
-            You get the velocity of a startup with the reliability of an engineer.
+          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
+            Throughout his career, no matter the role, he always found himself automating the work. This passion led him out of traditional engineering and into the startup world—first honing his development skills at a tech startup, then deepening his <span className="text-foreground font-medium">cybersecurity and automation expertise</span> as a cybersecurity consultant.
+          </p>
+          
+          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
+            He founded <span className="text-foreground font-medium">Brooker Systems</span> to bring this wide range of skills to other businesses. Now, he builds custom, secure solutions for clients with unique problems.
           </p>
           
         </div>

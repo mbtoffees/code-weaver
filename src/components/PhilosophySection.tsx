@@ -8,19 +8,19 @@ const PhilosophySection = () => {
           </h2>
           
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tight">
-            Built to Solve, Not Just to Sell.
+            Built to Solve Problems.
           </h3>
           
           <div className="space-y-6 text-muted-foreground text-base sm:text-lg leading-relaxed">
             <p>
-              Most agencies try to force you into a box or sell you off-the-shelf 
+              Many agencies try to force you into a box or sell you off-the-shelf 
               products that don't fit. <span className="text-foreground font-medium">Brooker Systems</span> works 
               differently. We start with your specific problem and build the exact 
               solution required to fix it.
             </p>
             
             <p>
-              By leveraging modern AI-assisted development, we deliver complex, secure, 
+              By leveraging modern AI-assisted development, we deliver simple, secure, 
               and fully functional software in a fraction of the time of traditional firms.
             </p>
             

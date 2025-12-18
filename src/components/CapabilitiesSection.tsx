@@ -34,7 +34,7 @@ const capabilities = [
   {
     icon: Rocket,
     title: "SaaS & MVP Development",
-    description: "From napkin sketch to live product in days, not months.",
+    description: "From concept to live product in days, not months.",
     className: "md:col-span-2",
   },
 ];
@@ -48,7 +48,7 @@ const CapabilitiesSection = () => {
             // Capabilities
           </h2>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            What I Build
+            Core Capabilities
           </h3>
         </div>
 

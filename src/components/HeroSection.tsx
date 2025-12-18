@@ -8,17 +8,16 @@ const HeroSection = () => {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 opacity-0 animate-fade-up"
           style={{ animationDelay: "0.1s" }}
         >
-          If You Can Imagine the Workflow,{" "}
-          <span className="text-gradient">I Can Build the Software.</span>
+          Engineering Rigour. Agile Speed.{" "}
+          <span className="text-gradient">Bespoke Software.</span>
         </h1>
         
         <p 
           className="font-mono text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-up"
           style={{ animationDelay: "0.3s" }}
         >
-          Electrical Engineer. Cybersecurity Specialist. Builder. I design and deploy 
-          custom web apps, automation tools, and AI solutions. Fast, secure, and built 
-          for your specific needs.
+          We design and deploy custom web apps, automation tools, and AI solutions. 
+          Fast, secure, and built for your specific needs.
         </p>
         
         <div 
@@ -30,7 +29,7 @@ const HeroSection = () => {
             className="glow-primary-sm hover:glow-primary transition-all duration-300 text-base px-8 py-6"
             asChild
           >
-            <a href="mailto:hello@example.com">Tell Me Your Idea</a>
+            <a href="mailto:hello@example.com">Discuss Your Project</a>
           </Button>
         </div>
 

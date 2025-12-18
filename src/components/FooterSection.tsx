@@ -9,14 +9,9 @@ const FooterSection = () => {
           // Contact
         </h2>
         
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 tracking-tight">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 tracking-tight">
           What do you need to build?
         </h3>
-        
-        <p className="text-muted-foreground text-base sm:text-lg mb-10 max-w-xl mx-auto">
-          When you work with Brooker Systems, you aren't passed off to a junior account manager. 
-          You speak directly with the engineers building your project.
-        </p>
         
         <Button 
           size="lg" 
@@ -28,6 +23,10 @@ const FooterSection = () => {
             Get in Touch
           </a>
         </Button>
+        
+        <p className="mt-4 font-mono text-sm text-muted-foreground">
+          max@brookersystems.com.au
+        </p>
 
         <div className="mt-20 pt-8 border-t border-border">
           <p className="font-mono text-xs text-muted-foreground">

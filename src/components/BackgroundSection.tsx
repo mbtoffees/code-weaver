@@ -7,22 +7,28 @@ const BackgroundSection = () => {
             // Background
           </h2>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            Led by Engineering Experience.
+            Built on Engineering Principles.
           </h3>
         </div>
 
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-10">
-            Brooker Systems is led by <span className="text-foreground font-medium">Max Brooker</span>, 
-            who has a background in <span className="text-foreground font-medium">Cybersecurity</span> and{" "}
-            <span className="text-foreground font-medium">Engineering</span>. 
-            We don't believe in over-engineering. We combine the discipline of traditional 
-            engineering with the speed of AI-assisted development.
+          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
+            Brooker Systems is led by an <span className="text-foreground font-medium">Electrical Engineer</span> with 
+            a background in <span className="text-foreground font-medium">Cybersecurity</span> and{" "}
+            <span className="text-foreground font-medium">Cryptocurrency Startups</span>. 
+            We don't believe in over-complicating things. We combine the structural logic of 
+            engineering with the speed of modern development tools.
           </p>
           
-          <p className="text-foreground font-medium text-lg sm:text-xl">
+          <p className="text-foreground font-medium text-lg sm:text-xl mb-8">
             You get the velocity of a startup with the reliability of an engineer.
           </p>
+          
+          <div className="flex justify-center gap-8 text-sm font-mono text-primary">
+            <span>Secure.</span>
+            <span>Fast.</span>
+            <span>Reliable.</span>
+          </div>
         </div>
       </div>
     </section>

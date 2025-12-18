@@ -15,19 +15,17 @@ const PhilosophySection = () => {
             <p>
               Most agencies try to force you into a box or sell you off-the-shelf 
               products that don't fit. <span className="text-foreground font-medium">Brooker Systems</span> works 
-              differently. We start with your specific problem and engineer the exact 
+              differently. We start with your specific problem and build the exact 
               solution required to fix it.
             </p>
             
             <p>
-              By leveraging modern AI-assisted development and rapid prototyping, 
-              we deliver complex, secure, and fully functional software in a fraction 
-              of the time of traditional firms.
+              By leveraging modern AI-assisted development, we deliver complex, secure, 
+              and fully functional software in a fraction of the time of traditional firms.
             </p>
             
             <p className="text-foreground font-medium">
-              Whether it's a critical automation script or a full-scale enterprise 
-              application, we turn your logic into software.
+              We turn your business logic into reliable software.
             </p>
           </div>
         </div>

@@ -23,7 +23,7 @@ const FooterSection = () => {
           className="glow-primary-sm hover:glow-primary transition-all duration-300 text-base px-8 py-6"
           asChild
         >
-          <a href="mailto:hello@example.com" className="inline-flex items-center gap-2">
+          <a href="mailto:yourname@brookersystems.com?subject=Project%20Inquiry%20-%20[Company%20Name]&body=Hi%20Brooker%20Systems%2C%0A%0AI'm%20looking%20for%20help%20with..." className="inline-flex items-center gap-2">
             <Mail className="w-5 h-5" />
             Get in Touch
           </a>
@@ -31,7 +31,7 @@ const FooterSection = () => {
 
         <div className="mt-20 pt-8 border-t border-border">
           <p className="font-mono text-xs text-muted-foreground">
-            © 2025 Brooker Systems — All rights reserved.
+            © 2026 Brooker Systems — All rights reserved.
           </p>
         </div>
       </div>

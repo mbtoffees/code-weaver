@@ -8,26 +8,26 @@ const PhilosophySection = () => {
           </h2>
           
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tight">
-            Anything is Possible
+            Built to Solve, Not Just to Sell.
           </h3>
           
           <div className="space-y-6 text-muted-foreground text-base sm:text-lg leading-relaxed">
             <p>
-              Most agencies will try to force you into a box or sell you an 
-              off-the-shelf product that doesn't quite fit. I work differently. 
-              I start with <span className="text-foreground font-medium">your problem</span>, 
-              and I build the exact solution required to fix it.
+              Most agencies try to force you into a box or sell you off-the-shelf 
+              products that don't fit. <span className="text-foreground font-medium">Brooker Systems</span> works 
+              differently. We start with your specific problem and engineer the exact 
+              solution required to fix it.
             </p>
             
             <p>
-              Because I leverage modern AI-assisted development and rapid prototyping, 
-              I can build complex, secure, and fully functional software in a fraction 
-              of the time of traditional developers.
+              By leveraging modern AI-assisted development and rapid prototyping, 
+              we deliver complex, secure, and fully functional software in a fraction 
+              of the time of traditional firms.
             </p>
             
             <p className="text-foreground font-medium">
-              Whether it's a simple script to save you 10 minutes a day, or a 
-              full-scale web application to run your business—anything is possible.
+              Whether it's a critical automation script or a full-scale enterprise 
+              application, we turn your logic into software.
             </p>
           </div>
         </div>

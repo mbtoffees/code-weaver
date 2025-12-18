@@ -14,7 +14,8 @@ const FooterSection = () => {
         </h3>
         
         <p className="text-muted-foreground text-base sm:text-lg mb-10 max-w-xl mx-auto">
-          When you contact me, you talk directly to the engineer who will build your project.
+          When you work with Brooker Systems, you aren't passed off to a junior account manager. 
+          You speak directly with the engineers building your project.
         </p>
         
         <Button 
@@ -30,7 +31,7 @@ const FooterSection = () => {
 
         <div className="mt-20 pt-8 border-t border-border">
           <p className="font-mono text-xs text-muted-foreground">
-            © 2025 — All rights reserved.
+            © 2026 Brooker Systems — All rights reserved.
           </p>
         </div>
       </div>

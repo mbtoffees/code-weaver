@@ -1,9 +1,8 @@
-import { 
-  Globe, 
-  Brain, 
-  Database, 
-  Link2, 
-  Rocket 
+import {
+  Globe,
+  Brain,
+  Database,
+  Link2,
 } from "lucide-react";
 
 const capabilities = [
@@ -30,12 +29,6 @@ const capabilities = [
     title: "Connectors & Integrations",
     description: "The \"glue\" code that makes your CRM talk to your accounting software.",
     className: "md:col-span-1",
-  },
-  {
-    icon: Rocket,
-    title: "SaaS & MVP Development",
-    description: "From concept to live product in days, not months.",
-    className: "md:col-span-2",
   },
 ];
 

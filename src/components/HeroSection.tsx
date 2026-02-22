@@ -8,16 +8,16 @@ const HeroSection = () => {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 opacity-0 animate-fade-up"
           style={{ animationDelay: "0.1s" }}
         >
-          Engineering Precision. Agile Speed.{" "}
-          <span className="text-gradient">Bespoke Software.</span>
+          I build custom software that{" "}
+          <span className="text-gradient">solves specific problems.</span>
         </h1>
         
         <p 
           className="font-mono text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-up"
           style={{ animationDelay: "0.3s" }}
         >
-          We design and deploy custom web apps, automation tools, and AI solutions. 
-          Fast, secure, and built for your specific needs.
+          Custom web apps, automation tools, and AI solutions — built by one person
+          who gives a damn about your specific problem.
         </p>
         
         <div 

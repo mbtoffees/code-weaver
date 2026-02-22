@@ -16,8 +16,8 @@ const HeroSection = () => {
           className="font-mono text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-up"
           style={{ animationDelay: "0.3s" }}
         >
-          Custom web apps, automation tools, and AI solutions — built by one person
-          who gives a damn about your specific problem.
+          Custom web apps, automation tools, and AI solutions —
+          built for your specific problem.
         </p>
         
         <div 

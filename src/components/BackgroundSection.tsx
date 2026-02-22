@@ -13,15 +13,15 @@ const BackgroundSection = () => {
 
         <div className="max-w-3xl mx-auto text-left">
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            <span className="text-foreground font-medium">Max</span> is an <span className="text-foreground font-medium">Electrical Engineer</span> by trade with a lifelong passion for technology.
+            I'm an <span className="text-foreground font-medium">Electrical Engineer</span> by trade with a lifelong passion for technology.
           </p>
-          
+
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            Throughout his career, no matter the role, he always found himself automating the work. This passion led him out of traditional engineering and into the startup world—first honing his development skills at a tech startup, then deepening his <span className="text-foreground font-medium">cybersecurity and automation expertise</span> as a cybersecurity consultant.
+            Throughout my career, no matter the role, I always found myself automating the work. That passion led me out of traditional engineering and into the startup world — first honing my development skills at a tech startup, then deepening my <span className="text-foreground font-medium">cybersecurity and automation expertise</span> as a cybersecurity consultant.
           </p>
-          
+
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
-            He founded <span className="text-foreground font-medium">Brooker Systems</span> to bring this wide range of skills to other businesses. Now, he builds custom, secure solutions for clients with unique problems.
+            I founded <span className="text-foreground font-medium">Brooker Systems</span> to bring that range of skills to other businesses. I build custom, secure solutions for clients with specific problems.
           </p>
           
         </div>

@@ -6,8 +6,8 @@ const steps = [
   },
   {
     number: "02",
-    title: "I scope a fixed-price build.",
-    description: "You get a clear proposal — exactly what I'll build, for exactly what it'll cost. No surprises.",
+    title: "I scope the work and give you a clear proposal.",
+    description: "You'll know exactly what I'm building and what it'll cost — whether that's a fixed-price build or ongoing hourly work. No ambiguity.",
   },
   {
     number: "03",

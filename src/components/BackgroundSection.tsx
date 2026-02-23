@@ -21,7 +21,7 @@ const BackgroundSection = () => {
           </p>
 
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
-            I founded <span className="text-foreground font-medium">Brooker Systems</span> to bring that range of skills to other businesses. I build custom, secure solutions for clients with specific problems.
+            Now I build custom, secure software for businesses with specific problems.
           </p>
           
         </div>

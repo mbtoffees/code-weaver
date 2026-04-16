@@ -6,16 +6,16 @@ const PhilosophySection = () => {
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-6">
             // Philosophy
           </h2>
-          
+
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tight">
             Built to Solve Problems.
           </h3>
-          
+
           <div className="space-y-6 text-muted-foreground text-base sm:text-lg leading-relaxed">
             <p>
               Most agencies will slot you into a template or upsell you tools you don't need.
               I don't do that. I start with your specific problem and build exactly what's
-              required to fix it — nothing more, nothing less.
+              required to fix it - nothing more, nothing less.
             </p>
 
             <p>

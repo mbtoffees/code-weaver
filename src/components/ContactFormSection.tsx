@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Send, CheckCircle } from "lucide-react";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });

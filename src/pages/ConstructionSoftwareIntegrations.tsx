@@ -110,7 +110,7 @@ const ConstructionSoftwareIntegrations = () => {
             <img src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, borderRadius: 0, objectFit: "contain" }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
-          <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 15, padding: "10px 18px", borderRadius: 10 }}>Tell me what is slowing you down</a>
+          <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 15, padding: "10px 18px", borderRadius: 10 }}>Show me the problem</a>
         </div>
       </header>
 
@@ -124,9 +124,22 @@ const ConstructionSoftwareIntegrations = () => {
             I help businesses cut down repetitive computer work, speed up processes, keep data consistent and reduce mistakes caused by manual handling.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
-            <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Tell me what is slowing you down →</a>
+            <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Show me the problem →</a>
             <a href="#build" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#FFFFFF", color: "#211C15", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, border: "1px solid #E0D6C4" }}>See what can be automated</a>
           </div>
+        </div>
+      </section>
+
+      <section style={{ background: "#F4EEE3", borderTop: "1px solid #ECE3D4", borderBottom: "1px solid #ECE3D4" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(36px,5vw,62px) 28px" }}>
+          <aside style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.35)", display: "grid", gridTemplateColumns: "auto minmax(0, 1fr)", gap: 26, alignItems: "center" }}>
+            <img src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+            <div>
+              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 14px" }}>// built by Max Brooker</p>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.8rem,3vw,2.6rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>Electrical engineer turned cybersecurity analyst and software developer.</h2>
+              <p style={{ margin: "16px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>I build practical automation, AI integration and internal software around the systems already inside your business.</p>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -214,7 +227,7 @@ const ConstructionSoftwareIntegrations = () => {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "clamp(32px,6vw,72px)" }}>
             <div>
               <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// contact</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Tell me what is slowing the business down.</h2>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Show me the problem.</h2>
             </div>
             {submitted ? (
               <div style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: "40px 32px", textAlign: "center", boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
@@ -235,10 +248,10 @@ const ConstructionSoftwareIntegrations = () => {
                 </div>
                 <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
                   <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Message</span>
-                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me what is annoying, slow or error-prone in your business." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
+                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me what is annoying, slow or error-prone." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
                 </label>
                 {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again.</p>}
-                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Tell me what is slowing you down →"}</button>
+                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Show me the problem →"}</button>
               </form>
             )}
           </div>

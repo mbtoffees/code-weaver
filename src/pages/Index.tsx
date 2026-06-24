@@ -101,7 +101,7 @@ const Index = () => {
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 21, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
           <nav style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, fontWeight: 600 }}>
-            <a href="#contact" style={{ background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", padding: "11px 18px", borderRadius: 10 }}>Tell me what is slowing you down</a>
+            <a href="#contact" style={{ background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", padding: "11px 18px", borderRadius: 10 }}>Show me the problem</a>
           </nav>
         </div>
       </header>
@@ -115,25 +115,25 @@ const Index = () => {
               I build software that removes repetitive computer work.
             </h1>
             <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
-              I help businesses build better software, automate repetitive work, connect awkward systems, clean up messy data and integrate AI into real workflows.
+              I help businesses build better software, automate repetitive work, connect disjointed systems, clean up messy data and integrate AI into real workflows.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
-              <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Tell me what is slowing you down →</a>
+              <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Show me the problem →</a>
               <a href="#services" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#FFFFFF", color: "#211C15", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, border: "1px solid #E0D6C4" }}>See what I can build</a>
             </div>
           </div>
 
           <aside style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
-            <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 22 }}>
-              <img src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 96, height: 96, borderRadius: 22, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+            <div style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
+              <img src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
               <div>
-                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 24, letterSpacing: "-0.02em" }}>Max Brooker</p>
-                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 15 }}>Electrical engineer turned cybersecurity analyst and software developer.</p>
+                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em" }}>Max Brooker</p>
+                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity analyst and software developer.</p>
               </div>
             </div>
             <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
-              I build practical software for businesses with awkward computer work: automation systems, AI integrations, internal tools, data pipelines and the connective tissue between the tools you already use.
+              I build practical software for businesses with disjointed computer work: automation systems, AI integrations, internal tools, data pipelines and the connective tissue between the tools you already use.
             </p>
           </aside>
         </div>
@@ -175,9 +175,8 @@ const Index = () => {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "clamp(32px,6vw,72px)" }}>
             <div>
               <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// contact</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Tell me what is slowing the business down.</h2>
-              <p style={{ fontSize: "1.05rem", lineHeight: 1.55, color: "#574F42", margin: "20px 0 0", maxWidth: "42ch" }}>Send the rough version: the annoying process, repeated task, data problem or half-formed idea. I will tell you what I think is worth doing next.</p>
-            </div>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Show me the problem.</h2>
+                          </div>
             {submitted ? (
               <div style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: "40px 32px", textAlign: "center", boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
                 <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.4rem", margin: "0 0 8px" }}>Thanks — message sent.</h3>
@@ -197,10 +196,10 @@ const Index = () => {
                 </div>
                 <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
                   <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Message</span>
-                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me what is annoying, slow or error-prone in your business." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
+                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me what is annoying, slow or error-prone." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
                 </label>
                 {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again.</p>}
-                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Tell me what is slowing you down →"}</button>
+                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Show me the problem →"}</button>
               </form>
             )}
           </div>

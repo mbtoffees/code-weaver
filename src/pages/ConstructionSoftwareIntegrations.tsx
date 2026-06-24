@@ -107,7 +107,7 @@ const ConstructionSoftwareIntegrations = () => {
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.86)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 70, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>
-            <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 9, background: "#211C15", color: "#F4EEE3", fontFamily: "'Spline Sans Mono', monospace", fontWeight: 600, fontSize: 15 }}>bs</span>
+            <img src="/brooker-mark.png" alt="" style={{ width: 38, height: 38, borderRadius: 10, objectFit: "contain", background: "#FFFFFF", padding: 2 }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
           <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 15, padding: "10px 18px", borderRadius: 10 }}>Get my free task review</a>
@@ -248,7 +248,7 @@ const ConstructionSoftwareIntegrations = () => {
       <footer style={{ background: "#211C15", color: "#A89B86" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 28px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-            <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: 8, background: "#C44E1E", color: "#FBF7EF", fontFamily: "'Spline Sans Mono', monospace", fontWeight: 600, fontSize: 14 }}>bs</span>
+            <img src="/brooker-mark.png" alt="" style={{ width: 34, height: 34, borderRadius: 9, objectFit: "contain", background: "#FBF7EF", padding: 2 }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 17, color: "#F4EEE3" }}>Brooker Systems</span>
           </div>
           <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Perth, Australia</p>

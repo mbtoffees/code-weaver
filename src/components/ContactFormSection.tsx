@@ -7,7 +7,17 @@ import { Send, CheckCircle } from "lucide-react";
 
 const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
 
-const ContactFormSection = () => {
+type ContactFormSectionProps = {
+  heading?: string;
+  messagePlaceholder?: string;
+  submitLabel?: string;
+};
+
+const ContactFormSection = ({
+  heading = "Tell me about the problems slowing your team down.",
+  messagePlaceholder = "Tell me what is annoying, slow or error-prone in your business.",
+  submitLabel = "Get my free task review",
+}: ContactFormSectionProps) => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
@@ -39,7 +49,7 @@ const ContactFormSection = () => {
             // Contact
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
-            What do you need to build?
+            {heading}
           </h3>
         </div>
 
@@ -85,7 +95,7 @@ const ContactFormSection = () => {
               <Label htmlFor="message">Message</Label>
               <Textarea
                 id="message"
-                placeholder="Tell me about your project..."
+                placeholder={messagePlaceholder}
                 rows={5}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -110,14 +120,11 @@ const ContactFormSection = () => {
               ) : (
                 <>
                   <Send className="w-4 h-4 mr-2" />
-                  Send Message
+                  {submitLabel}
                 </>
               )}
             </Button>
 
-            <p className="text-center font-mono text-sm text-muted-foreground">
-              max@brookersystems.com.au
-            </p>
           </form>
         )}
       </div>

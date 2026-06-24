@@ -18,7 +18,7 @@ const steps = [
 
 const HowIWorkSection = () => {
   return (
-    <section className="py-24 px-4">
+    <section id="process" className="py-24 px-4">
       <div className="container max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-4">

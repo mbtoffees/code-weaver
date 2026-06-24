@@ -16,22 +16,23 @@ const BackgroundSection = () => {
             <img
               src="/max-brooker.jpg"
               alt="Max Brooker"
-              className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover object-top shadow-lg"
+              className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover object-top shadow-lg ring-4 ring-primary/10"
             />
           </div>
 
           <div className="text-left">
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            I'm an <span className="text-foreground font-medium">Electrical Engineer</span> by trade with a lifelong passion for technology.
-          </p>
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
+              I'm an <span className="text-foreground font-medium">Electrical Engineer</span> by trade with a lifelong habit of automating the work around me.
+            </p>
 
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-            Throughout my career, no matter the role, I always found myself automating the work. That passion led me out of traditional engineering and into the startup world - first honing my development skills at a tech startup, then deepening my <span className="text-foreground font-medium">cybersecurity and automation expertise</span> as a cybersecurity consultant.
-          </p>
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
+              That background shows up in the way Brooker Systems builds: practical engineering first, clean interfaces second,
+              and enough security, testing, logging, and documentation to keep the system maintainable after the exciting demo is over.
+            </p>
 
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
-            Now I build custom, secure software for businesses with specific problems.
-          </p>
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
+              Recent builds span construction workflow automation, racehorse sport-science operations, and accounting/tax data collection — different industries, same pattern: take the manual process seriously and turn it into reliable software.
+            </p>
           </div>
         </div>
       </div>

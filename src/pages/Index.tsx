@@ -29,32 +29,28 @@ const capabilities = [
   },
 ];
 
-const examples = [
+const systems = [
   {
-    label: "AWB / construction workflows",
-    title: "Automation and document review tooling",
-    copy: "Workflow infrastructure for handling documents, checking details and producing reviewable outputs instead of relying on manual back-and-forth.",
+    label: "Automation systems",
+    title: "Turn repeated computer work into a reliable workflow",
+    copy: "I build automations for copying, checking, routing, renaming, reporting, filing and follow-up work that should not need a person every time.",
   },
   {
-    label: "Equilytics",
-    title: "Horse sport science platform",
-    copy: "Training schedules, dashboards, imports, reporting and role-aware workflows for racehorse performance operations.",
+    label: "AI integration",
+    title: "Use AI for the parts where it actually helps",
+    copy: "Document analysis, summarisation, classification, extraction and review queues — designed with human approval where the work matters.",
   },
   {
-    label: "Fact-finding product",
-    title: "Crypto tax fact-finding portal",
-    copy: "A secure portal for collecting client information, managing submissions, drafting questionnaires and supporting accounting workflows.",
+    label: "Custom software",
+    title: "Build the tool your business keeps trying to fake in spreadsheets",
+    copy: "Internal portals, dashboards, forms, reporting tools and client-facing workflows built around your real process.",
+  },
+  {
+    label: "Data consistency",
+    title: "Keep information aligned across messy systems",
+    copy: "Synchronisation tools, validation checks and data pipelines that reduce duplicates, missing fields and conflicting records.",
   },
 ];
-
-const outcomes = [
-  "Less manual computer work",
-  "Cleaner data across systems",
-  "Faster reports and reviews",
-  "Fewer avoidable mistakes",
-];
-
-const industries = ["Construction", "Accounting", "Blockchain", "Cybersecurity", "Sports science", "Businesses with messy computer work"];
 
 const inputStyle = {
   fontFamily: "inherit",
@@ -99,15 +95,13 @@ const Index = () => {
   return (
     <main style={{ minHeight: "100vh", background: "#F4EEE3", color: "#211C15", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.88)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 70, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 86, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 38, height: 38, borderRadius: 10, objectFit: "contain", background: "#FFFFFF", padding: 2 }} />
-            <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.01em" }}>Brooker Systems</span>
+            <img src="/brooker-mark.png" alt="" style={{ width: 62, height: 62, borderRadius: 0, objectFit: "contain" }} />
+            <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 21, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
           <nav style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, fontWeight: 600 }}>
-            <a href="#work" style={{ color: "#574F42", textDecoration: "none" }}>Work</a>
-            <a href="#services" style={{ color: "#574F42", textDecoration: "none" }}>Services</a>
-            <a href="#contact" style={{ background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", padding: "10px 18px", borderRadius: 10 }}>Get my free task review</a>
+            <a href="#contact" style={{ background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", padding: "11px 18px", borderRadius: 10 }}>Tell me what is slowing you down</a>
           </nav>
         </div>
       </header>
@@ -116,43 +110,39 @@ const Index = () => {
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(54px,8vw,96px) 28px clamp(56px,7vw,92px)", position: "relative", display: "grid", gridTemplateColumns: "minmax(0, 1.15fr) minmax(280px, 0.85fr)", gap: "clamp(32px,6vw,72px)", alignItems: "center" }}>
           <div>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Brooker Systems // software + automation</p>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Brooker Systems // software + automation + AI integration</p>
             <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.7rem,6vw,5rem)", lineHeight: 1.02, letterSpacing: "-0.04em", margin: 0, maxWidth: "13ch" }}>
               I build software that removes repetitive computer work.
             </h1>
             <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
-              Brooker Systems helps businesses build custom software, automate workflows, connect systems, clean up data and use AI where it actually saves time.
+              I help businesses build better software, automate repetitive work, connect awkward systems, clean up messy data and integrate AI into real workflows.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
-              <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Get my free task review →</a>
+              <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Tell me what is slowing you down →</a>
               <a href="#services" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#FFFFFF", color: "#211C15", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, border: "1px solid #E0D6C4" }}>See what I can build</a>
             </div>
           </div>
 
-          <div style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 24, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
-              <img src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 76, height: 76, borderRadius: 18, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+          <aside style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
+            <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 22 }}>
+              <img src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 96, height: 96, borderRadius: 22, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
               <div>
-                <p style={{ margin: 0, fontWeight: 700, fontSize: 18 }}>Built by Max Brooker</p>
-                <p style={{ margin: "5px 0 0", color: "#7C715F", fontSize: 14 }}>Electrical engineer, developer and automation builder.</p>
+                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 24, letterSpacing: "-0.02em" }}>Max Brooker</p>
+                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 15 }}>Electrical engineer turned cybersecurity analyst and software developer.</p>
               </div>
             </div>
-            <div style={{ display: "grid", gap: 12 }}>
-              {outcomes.map((outcome) => (
-                <div key={outcome} style={{ display: "flex", alignItems: "center", gap: 10, background: "#FDFBF6", border: "1px solid #EFE6D6", borderRadius: 13, padding: "13px 14px" }}>
-                  <span style={{ width: 8, height: 8, borderRadius: 999, background: "#C44E1E", flex: "0 0 auto" }} />
-                  <span style={{ color: "#2C261D", fontWeight: 500 }}>{outcome}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+            <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
+              I build practical software for businesses with awkward computer work: automation systems, AI integrations, internal tools, data pipelines and the connective tissue between the tools you already use.
+            </p>
+          </aside>
         </div>
       </section>
 
       <section id="services" style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4", borderBottom: "1px solid #ECE3D4" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
           <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// what I can do</p>
-          <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2rem,4vw,3.2rem)", lineHeight: 1.06, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Software, automation, data and AI — without the agency nonsense.</h2>
+          <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2rem,4vw,3.2rem)", lineHeight: 1.06, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Software, automation, AI integration and the messy bits in between.</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18, marginTop: 44 }}>
             {capabilities.map((capability) => (
               <div key={capability.title} style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 18, padding: 28 }}>
@@ -166,10 +156,10 @@ const Index = () => {
 
       <section id="work" style={{ background: "#F4EEE3" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
-          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// recent work</p>
-          <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2rem,4vw,3.2rem)", lineHeight: 1.06, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Different industries, same pattern: messy work turned into reliable software.</h2>
+          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// what this can look like</p>
+          <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2rem,4vw,3.2rem)", lineHeight: 1.06, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>A few ways this can show up inside a business.</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18, marginTop: 44 }}>
-            {examples.map((example) => (
+            {systems.map((example) => (
               <article key={example.title} style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 20, padding: 30, minHeight: 250 }}>
                 <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, color: "#B06B43", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 24px" }}>{example.label}</p>
                 <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.55rem", lineHeight: 1.12, margin: "0 0 12px", letterSpacing: "-0.02em" }}>{example.title}</h3>
@@ -180,32 +170,18 @@ const Index = () => {
         </div>
       </section>
 
-      <section style={{ background: "#211C15", color: "#E7DCCB" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(52px,6vw,84px) 28px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(28px,6vw,70px)", alignItems: "center" }}>
-          <div>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#F2A074", letterSpacing: "0.02em", margin: "0 0 14px" }}>// where this fits</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#FBF7EF", fontSize: "clamp(1.8rem,3vw,2.6rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>Useful for any business where people do repetitive work behind a computer.</h2>
-          </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-            {industries.map((industry) => (
-              <span key={industry} style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: 15.5, fontWeight: 500, color: "#EADFCE", border: "1px solid #463C2C", background: "#2A2419", borderRadius: 999, padding: "11px 19px" }}><span style={{ width: 6, height: 6, borderRadius: 999, background: "#C44E1E" }} />{industry}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="contact" style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "clamp(32px,6vw,72px)" }}>
             <div>
               <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// contact</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Tell me about the problems slowing your team down.</h2>
-              <p style={{ fontSize: "1.05rem", lineHeight: 1.55, color: "#574F42", margin: "20px 0 0", maxWidth: "42ch" }}>Send the messy version. If it is not worth automating, I will tell you that too.</p>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Tell me what is slowing the business down.</h2>
+              <p style={{ fontSize: "1.05rem", lineHeight: 1.55, color: "#574F42", margin: "20px 0 0", maxWidth: "42ch" }}>Send the rough version: the annoying process, repeated task, data problem or half-formed idea. I will tell you what I think is worth doing next.</p>
             </div>
             {submitted ? (
               <div style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: "40px 32px", textAlign: "center", boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
                 <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.4rem", margin: "0 0 8px" }}>Thanks — message sent.</h3>
-                <p style={{ margin: 0, color: "#5C5446", lineHeight: 1.55 }}>I will get back to you with a practical view on whether it is worth automating.</p>
+                <p style={{ margin: 0, color: "#5C5446", lineHeight: 1.55 }}>I will get back to you with a practical view on what is worth doing next.</p>
               </div>
             ) : (
               <form onSubmit={onSubmit} style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: 28, display: "flex", flexDirection: "column", gap: 16, boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
@@ -224,7 +200,7 @@ const Index = () => {
                   <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me what is annoying, slow or error-prone in your business." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
                 </label>
                 {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again.</p>}
-                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Get my free task review →"}</button>
+                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Tell me what is slowing you down →"}</button>
               </form>
             )}
           </div>
@@ -234,7 +210,7 @@ const Index = () => {
       <footer style={{ background: "#211C15", color: "#A89B86" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 28px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 34, height: 34, borderRadius: 9, objectFit: "contain", background: "#FBF7EF", padding: 2 }} />
+            <img src="/brooker-mark.png" alt="" style={{ width: 48, height: 48, borderRadius: 0, objectFit: "contain" }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 17, color: "#F4EEE3" }}>Brooker Systems</span>
           </div>
           <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Perth, Australia</p>

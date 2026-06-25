@@ -115,16 +115,31 @@ const AdminAutomation = () => {
 
       <section id="top" style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(34px,6vw,78px) 28px clamp(42px,6vw,74px)", position: "relative" }}>
-          <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.55rem,5.6vw,4.7rem)", lineHeight: 1.02, letterSpacing: "-0.035em", margin: 0, maxWidth: "16ch" }}>
-            Tell me the repetitive work. I'll build the system that handles it.
-          </h1>
-          <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
-            I build automations and small internal tools around the software your business already runs, so repetitive computer work stops needing a person every time.
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
-            <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>See what's automatable</a>
+        <div className="landing-hero-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(34px,6vw,78px) 28px clamp(42px,6vw,74px)", position: "relative", display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(400px, 420px)", gap: "clamp(32px,6vw,72px)", alignItems: "center" }}>
+          <div>
+            <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.55rem,5.6vw,4.7rem)", lineHeight: 1.02, letterSpacing: "-0.035em", margin: 0, maxWidth: "16ch" }}>
+              Tell me the repetitive work. I'll build the system that handles it.
+            </h1>
+            <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
+              I build automations and small internal tools around the software your business already runs, so repetitive computer work stops needing a person every time.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
+              <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>See what's automatable</a>
+            </div>
           </div>
+          <aside className="admin-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
+            <div className="admin-profile-row" style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
+              <img className="admin-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+              <div>
+                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>Max Brooker</p>
+                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity professional and automation expert.</p>
+              </div>
+            </div>
+            <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
+              I build practical software for businesses with disjointed computer work: automation systems, AI integrations, internal tools, data pipelines and the connective tissue between the tools you already use.
+            </p>
+          </aside>
         </div>
       </section>
 
@@ -179,24 +194,6 @@ const AdminAutomation = () => {
               <p style={{ margin: "14px 0 0", fontSize: 16, lineHeight: 1.55, color: "#E7DCCB" }}>I automated the reporting steps around their existing exports, so the team got that time back every Monday instead of piecing it together by hand.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section style={{ background: "#FBF7EF", borderBottom: "1px solid #ECE3D4" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(42px,6vw,72px) 28px" }}>
-          <aside className="admin-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)", maxWidth: 720, margin: "0 auto" }}>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
-            <div className="admin-profile-row" style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
-              <img className="admin-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
-              <div>
-                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em" }}>Max Brooker</p>
-                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity professional and automation expert.</p>
-              </div>
-            </div>
-            <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
-              I build practical software for businesses with disjointed computer work: automation systems, AI integrations, internal tools, data pipelines and the connective tissue between the tools you already use.
-            </p>
-          </aside>
         </div>
       </section>
 

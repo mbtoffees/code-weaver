@@ -153,3 +153,9 @@
     height: 112px !important;
   }
 }
+
+@media (max-width: 860px) {
+  .landing-hero-inner {
+    grid-template-columns: 1fr !important;
+  }
+}

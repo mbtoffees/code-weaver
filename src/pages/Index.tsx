@@ -95,23 +95,23 @@ const Index = () => {
   return (
     <main style={{ minHeight: "100vh", background: "#F4EEE3", color: "#211C15", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.88)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 86, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+        <div className="home-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 86, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 62, height: 62, borderRadius: 0, objectFit: "contain" }} />
-            <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 21, letterSpacing: "-0.01em" }}>Brooker Systems</span>
+            <img className="home-header-logo" src="/brooker-mark.png" alt="" style={{ width: 62, height: 62, borderRadius: 0, objectFit: "contain" }} />
+            <span className="home-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 21, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
-          <nav style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, fontWeight: 600 }}>
-            <a href="#contact" style={{ background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", padding: "11px 18px", borderRadius: 10 }}>Show me the problem</a>
+          <nav className="home-header-nav" style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, fontWeight: 600 }}>
+            <a className="home-header-cta" href="#contact" style={{ background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", padding: "11px 18px", borderRadius: 10 }}>Show me the problem</a>
           </nav>
         </div>
       </header>
 
       <section style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(54px,8vw,96px) 28px clamp(56px,7vw,92px)", position: "relative", display: "grid", gridTemplateColumns: "minmax(0, 1.15fr) minmax(280px, 0.85fr)", gap: "clamp(32px,6vw,72px)", alignItems: "center" }}>
+        <div className="home-hero-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(54px,8vw,96px) 28px clamp(56px,7vw,92px)", position: "relative", display: "grid", gridTemplateColumns: "minmax(0, 1.15fr) minmax(280px, 0.85fr)", gap: "clamp(32px,6vw,72px)", alignItems: "center" }}>
           <div>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Brooker Systems // software + automation + AI integration</p>
-            <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.7rem,6vw,5rem)", lineHeight: 1.02, letterSpacing: "-0.04em", margin: 0, maxWidth: "13ch" }}>
+            <p className="home-hero-eyebrow" style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Brooker Systems // software + automation + AI integration</p>
+            <h1 className="home-hero-title" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.7rem,6vw,5rem)", lineHeight: 1.02, letterSpacing: "-0.04em", margin: 0, maxWidth: "13ch" }}>
               I build software that removes repetitive computer work.
             </h1>
             <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
@@ -123,10 +123,10 @@ const Index = () => {
             </div>
           </div>
 
-          <aside style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
+          <aside className="home-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
-            <div style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
-              <img src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+            <div className="home-profile-row" style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
+              <img className="home-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "center 26%", border: "1px solid #E7DECE" }} />
               <div>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em" }}>Max Brooker</p>
                 <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity professional and automation expert.</p>

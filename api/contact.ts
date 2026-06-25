@@ -17,7 +17,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   res.setHeader("Access-Control-Allow-Origin", "https://brookersystems.com.au");
 
-  const { name, email, phone, message } = req.body;
+  const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: "All fields are required." });
@@ -29,7 +29,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       to: "max@brookersystems.com.au",
       subject: `New enquiry from ${name}`,
       replyTo: email,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\nMessage:\n${message}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
     return res.json({ success: true });

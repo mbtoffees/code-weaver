@@ -58,9 +58,6 @@ const workSteps = [
   },
 ];
 
-const phoneDisplay = "";
-const phoneHref = "";
-
 const inputStyle = {
   fontFamily: "inherit",
   fontSize: 15,
@@ -78,7 +75,7 @@ const ConstructionSoftwareIntegrations = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -95,7 +92,7 @@ const ConstructionSoftwareIntegrations = () => {
       if (!res.ok) throw new Error("Failed to send");
 
       setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", message: "" });
       window.location.assign("/thank-you");
     } catch {
       setError(true);
@@ -129,11 +126,6 @@ const ConstructionSoftwareIntegrations = () => {
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
             <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>See what's automatable</a>
           </div>
-          {phoneDisplay && phoneHref && (
-            <p style={{ margin: "26px 0 0", color: "#6A5F4E", fontSize: 15.5, lineHeight: 1.55, maxWidth: "72ch" }}>
-              Prefer to call? <a href={phoneHref} style={{ color: "#C44E1E", fontWeight: 700, textDecoration: "none" }}>{phoneDisplay}</a>
-            </p>
-          )}
         </div>
       </section>
 
@@ -245,10 +237,6 @@ const ConstructionSoftwareIntegrations = () => {
                   <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
                     <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Email</span>
                     <input type="email" required value={formData.email} onChange={(event) => setFormData({ ...formData, email: event.target.value })} style={inputStyle} />
-                  </label>
-                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Best number to reach you <span style={{ color: "#8D806B", fontWeight: 500 }}>(optional)</span></span>
-                    <input type="tel" value={formData.phone} onChange={(event) => setFormData({ ...formData, phone: event.target.value })} style={inputStyle} />
                   </label>
                 </div>
                 <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>

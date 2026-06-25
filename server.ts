@@ -12,7 +12,7 @@ app.use(express.json());
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post("/api/contact", async (req, res) => {
-  const { name, email, phone, message } = req.body;
+  const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: "All fields are required." });
@@ -24,7 +24,7 @@ app.post("/api/contact", async (req, res) => {
       to: "max@brookersystems.com.au",
       subject: `New enquiry from ${name}`,
       replyTo: email,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\nMessage:\n${message}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
     return res.json({ success: true });

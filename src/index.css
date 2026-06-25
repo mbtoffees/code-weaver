@@ -103,3 +103,41 @@
     border-color: hsl(var(--primary) / 0.5);
   }
 }
+
+@media (max-width: 640px) {
+  .construction-header-inner {
+    height: 68px !important;
+    padding: 0 12px !important;
+    gap: 10px !important;
+  }
+
+  .construction-header-logo {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .construction-header-name {
+    font-size: 14px !important;
+    line-height: 1.05 !important;
+    max-width: 68px;
+  }
+
+  .construction-header-cta {
+    font-size: 12px !important;
+    line-height: 1.15 !important;
+    padding: 8px 10px !important;
+    max-width: 142px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .construction-profile-card {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .construction-profile-image {
+    width: 112px !important;
+    height: 112px !important;
+  }
+}

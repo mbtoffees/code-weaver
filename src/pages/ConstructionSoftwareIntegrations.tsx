@@ -1,64 +1,41 @@
 import { FormEvent, useState } from "react";
 
-const outcomes = [
-  "Less time spent copying information between systems",
-  "Faster processes with fewer missed steps",
-  "Cleaner reports so managers can see what is actually going on",
-  "Fewer mistakes from manual handling and spreadsheet work",
+const problemExamples = [
+  "Site staff re-type delivery dockets into your accounting system every afternoon.",
+  "Someone rebuilds the same weekly progress or cost report from exports by hand.",
+  "RFIs, variations, invoices or site photos need renaming, checking and filing.",
+  "Job numbers, suppliers or client details don't match between systems.",
+  "The estimator's pricing process lives only in one person's head.",
+  "You only spot a budget or data error after the report's already gone out.",
 ];
 
-const examples = [
+const proofPoints = [
   {
     title: "~80%",
-    copy: "less manual form-processing work after replacing repeated manual steps with a custom workflow.",
+    copy: "less manual form work after replacing repeated data entry with a custom workflow.",
   },
   {
-    title: "Hours → minutes",
-    copy: "AI-assisted review pipelines that analyse documents and produce structured outputs much faster than manual review.",
-  },
-  {
-    title: "Cleaner data",
-    copy: "Checks and synchronisation tools that help keep the same information consistent across multiple places.",
-  },
-  {
-    title: "Less inbox chasing",
-    copy: "Email automations that sort, route, summarise and follow up on routine messages so staff do not have to.",
+    title: "~5 hrs/week",
+    copy: "saved on a weekly cost report that used to be rebuilt from exports by hand.",
   },
 ];
 
-const goodFits = [
-  "A staff member copies the same details from one system into another.",
-  "Someone rebuilds the same weekly report from spreadsheets and exports.",
-  "Documents, forms or attachments need to be checked, renamed or filed.",
-  "Managers only find data problems after the report is already wrong.",
-  "Different systems have different names, job numbers or customer details.",
-  "Important work relies on one person remembering the exact steps.",
-];
-
-const services = [
+const workSteps = [
   {
-    title: "Automate repetitive work",
-    copy: "Remove boring handoffs: copying, checking, renaming, matching, filing, chasing and updating records.",
+    title: "You show me the work",
+    copy: "The repetitive task that wastes time or causes mistakes.",
   },
   {
-    title: "Turn messy files into usable information",
-    copy: "Pull useful details out of emails, PDFs, spreadsheets, forms and exports so your team can review them faster.",
+    title: "I map where it breaks",
+    copy: "Where the information starts, where it needs to go and where errors creep in.",
   },
   {
-    title: "Find data problems early",
-    copy: "Flag missing fields, duplicates, inconsistent details and other issues while they can still be fixed.",
-  },
-  {
-    title: "Use AI where it actually helps",
-    copy: "Use AI for classification, summaries, first-pass checks and review queues — with humans approving important work.",
-  },
-  {
-    title: "Build safe internal tools",
-    copy: "Create practical tools around your current workflow, with clear review steps instead of fragile spreadsheet workarounds.",
+    title: "I build the system",
+    copy: "Sized to the problem. Small fix or full internal tool, scoped to pay for itself.",
   },
 ];
 
-const industries = ["Construction", "Blockchain", "Cybersecurity", "Sports science", "Accounting"];
+const tools = ["Procore", "Buildertrend", "Simpro", "Xero", "MYOB", "Rapid Global", "job-costing systems", "spreadsheets", "email"];
 
 const inputStyle = {
   fontFamily: "inherit",
@@ -77,7 +54,7 @@ const ConstructionSoftwareIntegrations = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -94,7 +71,7 @@ const ConstructionSoftwareIntegrations = () => {
       if (!res.ok) throw new Error("Failed to send");
 
       setSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch {
       setError(true);
     } finally {
@@ -105,117 +82,96 @@ const ConstructionSoftwareIntegrations = () => {
   return (
     <main style={{ minHeight: "100vh", background: "#F4EEE3", color: "#211C15", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.86)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+        <div className="construction-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, borderRadius: 0, objectFit: "contain" }} />
-            <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.01em" }}>Brooker Systems</span>
+            <img className="construction-header-logo" src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, borderRadius: 0, objectFit: "contain" }} />
+            <span className="construction-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
-          <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 15, padding: "10px 18px", borderRadius: 10 }}>Show me the problem</a>
+          <a className="construction-header-cta" href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 15, padding: "10px 18px", borderRadius: 10 }}>Get in touch</a>
         </div>
       </header>
 
       <section id="top" style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(28px,5vw,58px) 28px clamp(36px,5vw,64px)", position: "relative" }}>
-          <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.7rem,6vw,4.85rem)", lineHeight: 1.02, letterSpacing: "-0.035em", margin: "26px 0 0", maxWidth: "15ch" }}>
-            Stop wasting hours copying, pasting and doing mundane computer work.
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(34px,6vw,78px) 28px clamp(42px,6vw,74px)", position: "relative" }}>
+          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 22px" }}>Perth automation and software for construction</p>
+          <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.55rem,5.6vw,4.7rem)", lineHeight: 1.02, letterSpacing: "-0.035em", margin: 0, maxWidth: "16ch" }}>
+            Tell me the repetitive work. I'll build the system that handles it.
           </h1>
-          <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "72ch" }}>
-            I help businesses cut down repetitive computer work, speed up processes, keep data consistent and reduce mistakes caused by manual handling.
+          <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
+            From a quick fix to a full internal tool, I build automation and software around the systems already in your construction business, so your team stops doing the same manual work by hand.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
-            <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Show me the problem →</a>
-            <a href="#build" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#FFFFFF", color: "#211C15", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, border: "1px solid #E0D6C4" }}>See what can be automated</a>
+            <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>See what's automatable</a>
           </div>
+          <p style={{ margin: "26px 0 0", color: "#6A5F4E", fontSize: 15.5, lineHeight: 1.55, maxWidth: "72ch" }}>
+            Built around the tools you already use: {tools.join(", ")}.
+          </p>
         </div>
       </section>
 
-      <section style={{ background: "#F4EEE3", borderTop: "1px solid #ECE3D4", borderBottom: "1px solid #ECE3D4" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(36px,5vw,62px) 28px" }}>
-          <aside style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.35)", display: "grid", gridTemplateColumns: "auto minmax(0, 1fr)", gap: 26, alignItems: "center" }}>
-            <img src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
-            <div>
-              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 14px" }}>// built by Max Brooker</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.8rem,3vw,2.6rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>Electrical engineer turned cybersecurity analyst and software developer.</h2>
-              <p style={{ margin: "16px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>I build practical automation, AI integration and internal software around the systems already inside your business.</p>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4", borderBottom: "1px solid #ECE3D4" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(48px,6vw,80px) 28px" }}>
-          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 28px" }}>// what you get</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 18 }}>
-            {outcomes.map((outcome) => (
-              <div key={outcome} style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 16, padding: 24 }}>
-                <p style={{ margin: 0, fontSize: 16.5, lineHeight: 1.4, color: "#211C15", fontWeight: 500 }}>{outcome}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ background: "#F4EEE3", borderBottom: "1px solid #ECE3D4" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(46px,6vw,76px) 28px" }}>
-          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 24px" }}>// examples of work I can do</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 18 }}>
-            {examples.map((example) => (
-              <div key={example.title} style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 18, padding: 28 }}>
-                <p style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.8rem,2.7vw,2.55rem)", lineHeight: 1, margin: 0 }}>{example.title}</p>
-                <p style={{ margin: "14px 0 0", fontSize: 16, lineHeight: 1.5, color: "#574F42" }}>{example.copy}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ background: "#211C15", color: "#E7DCCB" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(52px,6vw,84px) 28px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "clamp(24px,5vw,60px)", alignItems: "center" }}>
-            <div style={{ maxWidth: "34ch" }}>
-              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#F2A074", letterSpacing: "0.02em", margin: "0 0 14px" }}>// where I've worked</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#FBF7EF", fontSize: "clamp(1.6rem,3vw,2.3rem)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: 0 }}>Experience across very different industries.</h2>
-            </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-              {industries.map((industry) => (
-                <span key={industry} style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: 15.5, fontWeight: 500, color: "#EADFCE", border: "1px solid #463C2C", background: "#2A2419", borderRadius: 999, padding: "11px 19px" }}><span style={{ width: 6, height: 6, borderRadius: 999, background: "#C44E1E" }} />{industry}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="build">
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
+      <section id="problems" style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4", borderBottom: "1px solid #ECE3D4" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(54px,7vw,92px) 28px" }}>
           <div style={{ maxWidth: "62ch" }}>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// good fits</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>If your team does the same computer task every week, it is probably worth looking at.</h2>
-            <p style={{ fontSize: "1.1rem", lineHeight: 1.55, color: "#574F42", margin: "20px 0 0" }}>The first step is not a big software project. It is finding one annoying process where automation can save time quickly.</p>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>What usually slows builders down</p>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>The work isn't complicated. It's just repeated too often, by hand.</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 44 }}>
-            {goodFits.map((fit, index) => (
+            {problemExamples.map((fit, index) => (
               <div key={fit} style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 16, padding: "24px 24px 26px", display: "flex", flexDirection: "column", gap: 14 }}>
                 <span style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, color: "#B89F84" }}>{String(index + 1).padStart(2, "0")}</span>
                 <p style={{ margin: 0, fontSize: 16, lineHeight: 1.5, color: "#2C261D" }}>{fit}</p>
               </div>
             ))}
           </div>
+          <p style={{ margin: "28px 0 0", color: "#574F42", fontSize: 16.5, lineHeight: 1.6, maxWidth: "58ch" }}>
+            If your team does it every week by hand, it's probably worth a look, whether the fix is a small automation or a proper internal system.
+          </p>
         </div>
       </section>
 
-      <section style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4", borderBottom: "1px solid #ECE3D4" }}>
+      <section id="proof" style={{ background: "#F4EEE3", borderBottom: "1px solid #ECE3D4" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(54px,7vw,92px) 28px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+            {proofPoints.map((example) => (
+              <div key={example.title} style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 18, padding: 28 }}>
+                <p style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.8rem,2.7vw,2.55rem)", lineHeight: 1, margin: 0 }}>{example.title}</p>
+                <p style={{ margin: "14px 0 0", fontSize: 16, lineHeight: 1.5, color: "#574F42" }}>{example.copy}</p>
+              </div>
+            ))}
+            <div style={{ background: "#211C15", color: "#E7DCCB", borderRadius: 18, padding: 28 }}>
+              <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#FBF7EF", fontSize: "1.45rem", lineHeight: 1.15, margin: 0 }}>A construction firm was losing about half a day a week rebuilding a cost report.</h3>
+              <p style={{ margin: "14px 0 0", fontSize: 16, lineHeight: 1.55, color: "#E7DCCB" }}>I automated the reporting steps around their existing exports, so the office team got that time back every Monday instead of piecing it together by hand.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: "#FBF7EF", borderBottom: "1px solid #ECE3D4" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(42px,6vw,72px) 28px" }}>
+          <aside className="construction-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 18, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.35)", display: "grid", gridTemplateColumns: "auto minmax(0, 1fr)", gap: 26, alignItems: "center" }}>
+            <img className="construction-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 150, height: 150, borderRadius: 18, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+            <div>
+              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 14px" }}>Hi, I'm Max Brooker</p>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.65rem,2.8vw,2.35rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>I help Perth construction businesses cut out repetitive admin, from small automations to full internal software.</h2>
+              <p style={{ margin: "16px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>You tell me the repetitive task. I work out the system that handles it and build it around the software you already run. Some jobs are a quick automation; others are a proper tool your whole team uses. Either way, the first step is the same: a free 20-minute look at the work that's eating your time, and an honest answer on whether it's worth building.</p>
+              <p style={{ margin: "10px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>I focus on the jobs that chew up time every week, where a better system can give your team hours back.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="how" style={{ background: "#F4EEE3" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
           <div style={{ maxWidth: "60ch" }}>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// what I can build</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>Automation that gives your team time back.</h2>
-            <p style={{ fontSize: "1.1rem", lineHeight: 1.55, color: "#574F42", margin: "20px 0 0" }}>I build practical tools around the software, documents and spreadsheets already in your business. The outcome should be simple: less busywork, faster processes and fewer avoidable mistakes.</p>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>How I work</p>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>Start with one process, then build as far as it's worth taking.</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 44 }}>
-            {services.map((service) => (
-              <div key={service.title} style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: 28 }}>
-                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.28rem", margin: "0 0 8px", letterSpacing: "-0.01em" }}>{service.title}</h3>
-                <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.55, color: "#5C5446" }}>{service.copy}</p>
+            {workSteps.map((step) => (
+              <div key={step.title} style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: 28 }}>
+                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.28rem", margin: "0 0 8px", letterSpacing: "-0.01em" }}>{step.title}</h3>
+                <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.55, color: "#5C5446" }}>{step.copy}</p>
               </div>
             ))}
           </div>
@@ -226,13 +182,14 @@ const ConstructionSoftwareIntegrations = () => {
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "clamp(32px,6vw,72px)" }}>
             <div>
-              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// contact</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Show me the problem.</h2>
+              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>Free 20-minute workflow look</p>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "17ch" }}>Tell me what's slowing you down.</h2>
+              <p style={{ margin: "18px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5, maxWidth: "38ch" }}>Send the task that's driving you mad. I'll reply with a practical view on whether it's worth automating, and what building it would actually involve.</p>
             </div>
             {submitted ? (
               <div style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: "40px 32px", textAlign: "center", boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
-                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.4rem", margin: "0 0 8px" }}>Thanks — message ready to send.</h3>
-                <p style={{ margin: 0, color: "#5C5446", lineHeight: 1.55 }}>I will get back to you with a practical view on whether it is worth automating.</p>
+                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.4rem", margin: "0 0 8px" }}>Thanks. I have your message.</h3>
+                <p style={{ margin: 0, color: "#5C5446", lineHeight: 1.55 }}>I will get back to you with a practical view on whether it is worth automating and what building it would involve.</p>
               </div>
             ) : (
               <form onSubmit={onSubmit} style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: 28, display: "flex", flexDirection: "column", gap: 16, boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
@@ -245,13 +202,17 @@ const ConstructionSoftwareIntegrations = () => {
                     <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Email</span>
                     <input type="email" required value={formData.email} onChange={(event) => setFormData({ ...formData, email: event.target.value })} style={inputStyle} />
                   </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Best number to reach you <span style={{ color: "#8D806B", fontWeight: 500 }}>(optional)</span></span>
+                    <input type="tel" value={formData.phone} onChange={(event) => setFormData({ ...formData, phone: event.target.value })} style={inputStyle} />
+                  </label>
                 </div>
                 <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Message</span>
-                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me what is annoying, slow or error-prone." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>What's the task that's driving you mad?</span>
+                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="What does your team re-type, rename, check, chase or rebuild by hand?" style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
                 </label>
                 {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again.</p>}
-                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Show me the problem →"}</button>
+                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Send it through"}</button>
               </form>
             )}
           </div>
@@ -264,7 +225,7 @@ const ConstructionSoftwareIntegrations = () => {
             <img src="/brooker-mark.png" alt="" style={{ width: 46, height: 46, borderRadius: 0, objectFit: "contain" }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 17, color: "#F4EEE3" }}>Brooker Systems</span>
           </div>
-          <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Perth, Australia</p>
+          <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Based in Perth, working with WA construction businesses</p>
           <p style={{ margin: 0, fontSize: 13, color: "#7C715F" }}>© 2026 Brooker Systems</p>
         </div>
       </footer>

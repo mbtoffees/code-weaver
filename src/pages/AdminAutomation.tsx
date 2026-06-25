@@ -117,7 +117,7 @@ const AdminAutomation = () => {
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(34px,6vw,78px) 28px clamp(42px,6vw,74px)", position: "relative" }}>
           <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.55rem,5.6vw,4.7rem)", lineHeight: 1.02, letterSpacing: "-0.035em", margin: 0, maxWidth: "16ch" }}>
-            Repetitive computer work, gone. I build the system that handles it.
+            Tell me the repetitive work. I'll build the system that handles it.
           </h1>
           <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
             I build automations and small internal tools around the software your business already runs, so repetitive computer work stops needing a person every time.
@@ -184,14 +184,18 @@ const AdminAutomation = () => {
 
       <section style={{ background: "#FBF7EF", borderBottom: "1px solid #ECE3D4" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(42px,6vw,72px) 28px" }}>
-          <aside className="admin-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 18, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.35)", display: "grid", gridTemplateColumns: "auto minmax(0, 1fr)", gap: 26, alignItems: "center" }}>
-            <img className="admin-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 150, height: 150, borderRadius: 18, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
-            <div>
-              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 14px" }}>Hi, I'm Max Brooker</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.65rem,2.8vw,2.35rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>I help businesses cut out repetitive admin, from small automations to full internal software.</h2>
-              <p style={{ margin: "16px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>You tell me the repetitive task. I work out the system that handles it and build it around the software you already run. Some jobs are a quick automation; others are a proper tool your whole team uses. Either way, the first step is the same: a free 30-minute look at the work that's eating your time, and an honest answer on whether it's worth building.</p>
-              <p style={{ margin: "10px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>I focus on the jobs that chew up time every week, where a better system can give your team hours back.</p>
+          <aside className="admin-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)", maxWidth: 720, margin: "0 auto" }}>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
+            <div className="admin-profile-row" style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
+              <img className="admin-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+              <div>
+                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em" }}>Max Brooker</p>
+                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity professional and automation expert.</p>
+              </div>
             </div>
+            <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
+              I build practical software for businesses with disjointed computer work: automation systems, AI integrations, internal tools, data pipelines and the connective tissue between the tools you already use.
+            </p>
           </aside>
         </div>
       </section>
@@ -200,7 +204,7 @@ const AdminAutomation = () => {
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
           <div style={{ maxWidth: "60ch" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>How I work</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>Start with one process, then build as far as it's worth taking.</h2>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>We work through the workflow together, then I map and build the right solution.</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 44 }}>
             {workSteps.map((step) => (
@@ -218,7 +222,6 @@ const AdminAutomation = () => {
           <div style={{ maxWidth: 680, margin: "0 auto" }}>
             <div style={{ textAlign: "center", margin: "0 auto 32px" }}>
               <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>Tell me what's slowing you down.</h2>
-              <p style={{ margin: "18px auto 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5, maxWidth: "42ch" }}>Send the task that's driving you mad. I'll reply with a practical view on whether it's worth automating, and what building it would actually involve.</p>
             </div>
             {submitted ? (
               <div style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: "40px 32px", textAlign: "center", boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
@@ -227,17 +230,17 @@ const AdminAutomation = () => {
               </div>
             ) : (
               <form onSubmit={onSubmit} style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: 28, display: "flex", flexDirection: "column", gap: 16, boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16 }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, alignItems: "start" }}>
                   <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Name</span>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15", minHeight: 32, display: "flex", alignItems: "flex-start" }}>Name</span>
                     <input type="text" required value={formData.name} onChange={(event) => setFormData({ ...formData, name: event.target.value })} style={inputStyle} />
                   </label>
                   <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Email</span>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15", minHeight: 32, display: "flex", alignItems: "flex-start" }}>Email</span>
                     <input type="email" required value={formData.email} onChange={(event) => setFormData({ ...formData, email: event.target.value })} style={inputStyle} />
                   </label>
                   <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Best number to reach you <span style={{ color: "#8D806B", fontWeight: 500 }}>(optional)</span></span>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15", minHeight: 32, display: "block", lineHeight: 1.25 }}>Best number to reach you <span style={{ color: "#8D806B", fontWeight: 500 }}>(optional)</span></span>
                     <input type="tel" value={formData.phone} onChange={(event) => setFormData({ ...formData, phone: event.target.value })} style={inputStyle} />
                   </label>
                 </div>

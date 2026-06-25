@@ -141,6 +141,12 @@
     gap: 18px !important;
   }
 
+  .admin-profile-row,
+  .construction-profile-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
   .admin-profile-image,
   .construction-profile-image {
     width: 112px !important;

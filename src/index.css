@@ -105,24 +105,28 @@
 }
 
 @media (max-width: 640px) {
-  .admin-header-inner {
+  .admin-header-inner,
+  .construction-header-inner {
     height: 68px !important;
     padding: 0 12px !important;
     gap: 10px !important;
   }
 
-  .admin-header-logo {
+  .admin-header-logo,
+  .construction-header-logo {
     width: 42px !important;
     height: 42px !important;
   }
 
-  .admin-header-name {
+  .admin-header-name,
+  .construction-header-name {
     font-size: 14px !important;
     line-height: 1.05 !important;
     max-width: 68px;
   }
 
-  .admin-header-cta {
+  .admin-header-cta,
+  .construction-header-cta {
     font-size: 12px !important;
     line-height: 1.15 !important;
     padding: 8px 10px !important;
@@ -131,12 +135,14 @@
     justify-content: center;
   }
 
-  .admin-profile-card {
+  .admin-profile-card,
+  .construction-profile-card {
     grid-template-columns: 1fr !important;
     gap: 18px !important;
   }
 
-  .admin-profile-image {
+  .admin-profile-image,
+  .construction-profile-image {
     width: 112px !important;
     height: 112px !important;
   }

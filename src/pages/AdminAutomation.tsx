@@ -116,9 +116,8 @@ const AdminAutomation = () => {
       <section id="top" style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(34px,6vw,78px) 28px clamp(42px,6vw,74px)", position: "relative" }}>
-          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 22px" }}>Perth automation and internal software</p>
           <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.55rem,5.6vw,4.7rem)", lineHeight: 1.02, letterSpacing: "-0.035em", margin: 0, maxWidth: "16ch" }}>
-            Your team's re-typing the same data every day. I'll build the system that stops it.
+            Repetitive computer work, gone. I build the system that handles it.
           </h1>
           <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
             I build automations and small internal tools around the software your business already runs, so repetitive computer work stops needing a person every time.
@@ -190,7 +189,7 @@ const AdminAutomation = () => {
             <div>
               <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 14px" }}>Hi, I'm Max Brooker</p>
               <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.65rem,2.8vw,2.35rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>I help businesses cut out repetitive admin, from small automations to full internal software.</h2>
-              <p style={{ margin: "16px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>You tell me the repetitive task. I work out the system that handles it and build it around the software you already run. Some jobs are a quick automation; others are a proper tool your whole team uses. Either way, the first step is the same: a free 20-minute look at the work that's eating your time, and an honest answer on whether it's worth building.</p>
+              <p style={{ margin: "16px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>You tell me the repetitive task. I work out the system that handles it and build it around the software you already run. Some jobs are a quick automation; others are a proper tool your whole team uses. Either way, the first step is the same: a free 30-minute look at the work that's eating your time, and an honest answer on whether it's worth building.</p>
               <p style={{ margin: "10px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5 }}>I focus on the jobs that chew up time every week, where a better system can give your team hours back.</p>
             </div>
           </aside>
@@ -216,11 +215,10 @@ const AdminAutomation = () => {
 
       <section id="contact" style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "clamp(32px,6vw,72px)" }}>
-            <div>
-              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>Free 20-minute workflow look</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "17ch" }}>Tell me what's slowing you down.</h2>
-              <p style={{ margin: "18px 0 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5, maxWidth: "38ch" }}>Send the task that's driving you mad. I'll reply with a practical view on whether it's worth automating, and what building it would actually involve.</p>
+          <div style={{ maxWidth: 680, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", margin: "0 auto 32px" }}>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0 }}>Tell me what's slowing you down.</h2>
+              <p style={{ margin: "18px auto 0", color: "#574F42", lineHeight: 1.6, fontSize: 16.5, maxWidth: "42ch" }}>Send the task that's driving you mad. I'll reply with a practical view on whether it's worth automating, and what building it would actually involve.</p>
             </div>
             {submitted ? (
               <div style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: "40px 32px", textAlign: "center", boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>

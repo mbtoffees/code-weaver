@@ -105,24 +105,24 @@
 }
 
 @media (max-width: 640px) {
-  .construction-header-inner {
+  .admin-header-inner {
     height: 68px !important;
     padding: 0 12px !important;
     gap: 10px !important;
   }
 
-  .construction-header-logo {
+  .admin-header-logo {
     width: 42px !important;
     height: 42px !important;
   }
 
-  .construction-header-name {
+  .admin-header-name {
     font-size: 14px !important;
     line-height: 1.05 !important;
     max-width: 68px;
   }
 
-  .construction-header-cta {
+  .admin-header-cta {
     font-size: 12px !important;
     line-height: 1.15 !important;
     padding: 8px 10px !important;
@@ -131,12 +131,12 @@
     justify-content: center;
   }
 
-  .construction-profile-card {
+  .admin-profile-card {
     grid-template-columns: 1fr !important;
     gap: 18px !important;
   }
 
-  .construction-profile-image {
+  .admin-profile-image {
     width: 112px !important;
     height: 112px !important;
   }

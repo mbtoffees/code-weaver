@@ -75,7 +75,7 @@ const AdminAutomation = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -92,7 +92,7 @@ const AdminAutomation = () => {
       if (!res.ok) throw new Error("Failed to send");
 
       setSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
       window.location.assign("/thank-you");
     } catch {
       setError(true);
@@ -237,6 +237,10 @@ const AdminAutomation = () => {
                   <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
                     <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Email</span>
                     <input type="email" required value={formData.email} onChange={(event) => setFormData({ ...formData, email: event.target.value })} style={inputStyle} />
+                  </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Best number to reach you <span style={{ color: "#8D806B", fontWeight: 500 }}>(optional)</span></span>
+                    <input type="tel" value={formData.phone} onChange={(event) => setFormData({ ...formData, phone: event.target.value })} style={inputStyle} />
                   </label>
                 </div>
                 <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>

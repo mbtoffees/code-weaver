@@ -49,6 +49,32 @@ const inputStyle = {
 } as const;
 
 const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
+const GOOGLE_ADS_LEAD_CONVERSION = "AW-18270478625/Sp1XCPPchcUcEKHChYhE";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const trackLeadConversion = () => {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") return Promise.resolve();
+
+  return new Promise<void>((resolve) => {
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      resolve();
+    };
+
+    window.setTimeout(finish, 1000);
+    window.gtag?.("event", "conversion", {
+      send_to: GOOGLE_ADS_LEAD_CONVERSION,
+      event_callback: finish,
+    });
+  });
+};
 
 const ConstructionSoftwareIntegrations = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -70,6 +96,7 @@ const ConstructionSoftwareIntegrations = () => {
 
       if (!res.ok) throw new Error("Failed to send");
 
+      await trackLeadConversion();
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
       window.location.assign("/thank-you");

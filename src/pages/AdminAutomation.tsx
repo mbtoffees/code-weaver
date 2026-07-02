@@ -49,8 +49,8 @@ const workSteps = [
     copy: "The repetitive task that wastes time or causes mistakes.",
   },
   {
-    title: "I map where it breaks",
-    copy: "Where the information starts, where it needs to go and where errors creep in.",
+    title: "We design the workflow together",
+    copy: "We work through the steps, handoffs and outcome you want, then choose the simplest useful solution.",
   },
   {
     title: "I build the system",

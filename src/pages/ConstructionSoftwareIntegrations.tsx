@@ -26,8 +26,8 @@ const workSteps = [
     copy: "The repetitive task that wastes time or causes mistakes.",
   },
   {
-    title: "I map where it breaks",
-    copy: "Where the information starts, where it needs to go and where errors creep in.",
+    title: "We design the workflow together",
+    copy: "We work through the steps, handoffs and outcome you want, then choose the simplest useful solution.",
   },
   {
     title: "I build the system",
@@ -196,7 +196,7 @@ const ConstructionSoftwareIntegrations = () => {
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
           <div style={{ maxWidth: "60ch" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>How I work</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>We work through the workflow together, then I map and build the right solution.</h2>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>We work through the workflow together, then design and build the right solution.</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 44 }}>
             {workSteps.map((step) => (

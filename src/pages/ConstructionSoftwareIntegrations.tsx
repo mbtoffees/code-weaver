@@ -122,7 +122,7 @@ const ConstructionSoftwareIntegrations = () => {
               </div>
             </div>
             <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
-              Electrical engineer turned cybersecurity professional and automation expert. I build practical automation and internal software for construction businesses — and because I come from security, I treat your financial data and system access with the care it deserves.
+              Electrical engineer turned cybersecurity professional and automation expert. I build practical automation and internal software for construction businesses with repeated admin work, awkward software handoffs and systems that need to talk to each other.
             </p>
           </aside>
         </div>
@@ -170,9 +170,6 @@ const ConstructionSoftwareIntegrations = () => {
           <div style={{ maxWidth: "60ch" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>How I work</p>
             <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>We work through the workflow together, then I map and build the right solution.</h2>
-            <p style={{ margin: "22px 0 0", color: "#574F42", fontSize: 16.5, lineHeight: 1.6 }}>
-              I've already built integrations connecting tools like Simpro, Xero, Procore and MYOB — so you're not paying for someone to figure it out from scratch.
-            </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 44 }}>
             {workSteps.map((step) => (
@@ -182,6 +179,9 @@ const ConstructionSoftwareIntegrations = () => {
               </div>
             ))}
           </div>
+          <p style={{ margin: "24px 0 0", color: "#574F42", fontSize: 16.5, lineHeight: 1.6, maxWidth: "66ch" }}>
+            I've already built integrations connecting tools like Simpro, Xero, Procore and MYOB — so you're not paying for someone to figure it out from scratch.
+          </p>
         </div>
       </section>
 

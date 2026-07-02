@@ -12,11 +12,11 @@ const problemExamples = [
 const proofPoints = [
   {
     title: "~80%",
-    copy: "less manual form work after replacing repeated data entry with a custom workflow.",
+    copy: "less manual form work for a client after replacing repeated data entry with a custom workflow.",
   },
   {
     title: "~5 hrs/week",
-    copy: "saved on a weekly cost report that used to be rebuilt from exports by hand.",
+    copy: "saved for one client on a weekly cost report that used to be rebuilt from exports by hand.",
   },
 ];
 
@@ -95,7 +95,7 @@ const ConstructionSoftwareIntegrations = () => {
       <section id="top" style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
         <div className="landing-hero-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(34px,6vw,78px) 28px clamp(42px,6vw,74px)", position: "relative", display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(400px, 420px)", gap: "clamp(32px,6vw,72px)", alignItems: "center" }}>
-          <div>
+          <div style={{ minWidth: 0 }}>
             <h1 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.55rem,5.6vw,4.7rem)", lineHeight: 1.02, letterSpacing: "-0.035em", margin: 0, maxWidth: "16ch" }}>
               Tell me the repetitive work. I'll build the system that handles it.
             </h1>
@@ -108,18 +108,21 @@ const ConstructionSoftwareIntegrations = () => {
             <p style={{ margin: "26px 0 0", color: "#6A5F4E", fontSize: 15.5, lineHeight: 1.55, maxWidth: "72ch" }}>
               Built around the tools you already use: {tools.join(", ")}.
             </p>
+            <p style={{ margin: "12px 0 0", color: "#6A5F4E", fontSize: 15.5, lineHeight: 1.55, maxWidth: "72ch" }}>
+              Built by an ex-cybersecurity professional — your data and login credentials are handled carefully, not passed around.
+            </p>
           </div>
-          <aside className="construction-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
+          <aside className="construction-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)", minWidth: 0, boxSizing: "border-box" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
             <div className="construction-profile-row" style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
               <img className="construction-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
               <div>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>Max Brooker</p>
-                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity professional and automation expert.</p>
+                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Automation for construction businesses, built with a security mindset.</p>
               </div>
             </div>
             <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
-              I build practical automation and internal software for construction businesses with repeated admin work, awkward software handoffs, messy reports and systems that need to talk to each other.
+              Electrical engineer turned cybersecurity professional and automation expert. I build practical automation and internal software for construction businesses — and because I come from security, I treat your financial data and system access with the care it deserves.
             </p>
           </aside>
         </div>
@@ -167,6 +170,9 @@ const ConstructionSoftwareIntegrations = () => {
           <div style={{ maxWidth: "60ch" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>How I work</p>
             <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>We work through the workflow together, then I map and build the right solution.</h2>
+            <p style={{ margin: "22px 0 0", color: "#574F42", fontSize: 16.5, lineHeight: 1.6 }}>
+              I've already built integrations connecting tools like Simpro, Xero, Procore and MYOB — so you're not paying for someone to figure it out from scratch.
+            </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 44 }}>
             {workSteps.map((step) => (

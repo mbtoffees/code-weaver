@@ -247,13 +247,10 @@ const AppPrototype = () => {
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,98px) 28px" }}>
           <div style={{ maxWidth: 720, margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: 30 }}>
-              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Start here</p>
+              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Get in contact</p>
               <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(2rem,3.6vw,3rem)", lineHeight: 1.08, margin: 0 }}>
-                Send the idea. I will tell you what I would build first.
+                Send the idea or book a 20-minute call.
               </h2>
-              <p style={{ color: "#59616A", lineHeight: 1.62, margin: "18px auto 0", fontSize: 17, maxWidth: "58ch" }}>
-                A short description is enough. If it looks like a fit, we can use a 20-minute call to turn it into a fast, practical build plan.
-              </p>
             </div>
 
             {submitted ? (

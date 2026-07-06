@@ -7,6 +7,7 @@ const indexPath = join(distDir, 'index.html');
 const routes = [
   'construction-software-integrations',
   'admin-automation',
+  'app-prototype',
   'thank-you',
 ];
 

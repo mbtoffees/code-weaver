@@ -1,219 +1,205 @@
-import { FormEvent, useState } from "react";
+const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
-
-const capabilities = [
+const pillars = [
   {
-    title: "Build software",
-    copy: "Custom web apps, portals, dashboards and internal tools built around how your business actually works.",
+    title: "Agents",
+    copy: "Practical AI agents that read, classify, check, draft, route and report inside real business workflows.",
   },
   {
-    title: "Automate repetitive work",
-    copy: "Replace copy-paste, spreadsheet wrangling, file handling, checking and follow-up loops with reliable workflows.",
+    title: "Automations",
+    copy: "Reliable systems for the repetitive work: copying, checking, renaming, reconciling, filing, chasing and updating records.",
   },
   {
-    title: "Connect systems",
-    copy: "Move information between CRMs, accounting tools, cloud drives, spreadsheets, email and specialist platforms.",
-  },
-  {
-    title: "Clean up messy data",
-    copy: "Normalise exports, find duplicates, validate fields, reconcile records and keep the same information consistent in multiple places.",
-  },
-  {
-    title: "Use AI practically",
-    copy: "Document review, classification, summaries, extraction and first-pass analysis with clear human review steps.",
-  },
-  {
-    title: "Make things maintainable",
-    copy: "Security-minded builds with logging, testing, deployment notes and enough documentation to keep the system usable later.",
+    title: "Workflow systems",
+    copy: "Internal tools, portals and dashboards that turn scattered process knowledge into something your team can actually run.",
   },
 ];
 
-const systems = [
+const examples = [
+  "An agent reads inbox items, classifies them, extracts the useful fields and sends edge cases to a review queue.",
+  "A workflow checks PDFs, quotes or forms against rules, then produces a structured report instead of loose AI prose.",
+  "A dashboard shows exceptions across jobs, invoices, documents and data quality so people know what to fix next.",
+  "A system connects the tools you already use, keeps records aligned and logs what happened when something fails.",
+];
+
+const process = [
   {
-    label: "Automation systems",
-    title: "Turn repeated computer work into a reliable workflow",
-    copy: "I build automations for copying, checking, routing, renaming, reporting, filing and follow-up work that should not need a person every time.",
+    title: "Map the workflow",
+    copy: "We work out what starts the process, who touches it, where data moves, where judgement is needed and where mistakes happen.",
   },
   {
-    label: "AI integration",
-    title: "Use AI for the parts where it actually helps",
-    copy: "Document analysis, summarisation, classification, extraction and review queues — designed with human approval where the work matters.",
+    title: "Systemise the steps",
+    copy: "I split the work into deterministic checks, AI-assisted parts, human approvals, logs and outputs your team can trust.",
   },
   {
-    label: "Custom software",
-    title: "Build the tool your business keeps trying to fake in spreadsheets",
-    copy: "Internal portals, dashboards, forms, reporting tools and client-facing workflows built around your real process.",
-  },
-  {
-    label: "Data consistency",
-    title: "Keep information aligned across messy systems",
-    copy: "Synchronisation tools, validation checks and data pipelines that reduce duplicates, missing fields and conflicting records.",
+    title: "Build the smallest useful version",
+    copy: "Then I ship the first version, test it against real examples and harden the parts that prove they are worth keeping.",
   },
 ];
 
-const inputStyle = {
-  fontFamily: "inherit",
-  fontSize: 15,
-  color: "#211C15",
-  padding: "12px 13px",
-  border: "1px solid #E0D6C4",
-  borderRadius: 10,
-  background: "#FDFBF6",
-  outline: "none",
-} as const;
+const proof = [
+  "AI document extraction and review pipelines",
+  "Simpro, Procore, Zoho and Microsoft 365 automations",
+  "Quote compliance and spec-checking workflows",
+  "Inbox triage, invoice checks and approval queues",
+  "Operational dashboards and exception reports",
+  "Internal tools for messy spreadsheet processes",
+];
 
 const Index = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setSending(true);
-    setError(false);
-
-    try {
-      const res = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error("Failed to send");
-
-      setSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
-    } catch {
-      setError(true);
-    } finally {
-      setSending(false);
-    }
-  };
-
   return (
-    <main style={{ minHeight: "100vh", background: "#F4EEE3", color: "#211C15", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
-      <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.88)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
-        <div className="home-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 86, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
-          <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>
-            <img className="home-header-logo" src="/brooker-mark.png" alt="" style={{ width: 62, height: 62, borderRadius: 0, objectFit: "contain" }} />
-            <span className="home-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 21, letterSpacing: "-0.01em" }}>Brooker Systems</span>
+    <main style={{ minHeight: "100vh", background: "#F6F6F1", color: "#1A1C20", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
+      <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(246,246,241,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #DEDFD8" }}>
+        <div className="home-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+          <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#1A1C20" }}>
+            <img className="home-header-logo" src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, objectFit: "contain" }} />
+            <span className="home-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 750, fontSize: 20, letterSpacing: "0" }}>Brooker Systems</span>
           </a>
-          <nav className="home-header-nav" style={{ display: "flex", alignItems: "center", gap: 20, fontSize: 14, fontWeight: 600 }}>
-            <a className="home-header-cta" href="#contact" style={{ background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", padding: "11px 18px", borderRadius: 10 }}>Show me the problem</a>
+          <nav className="home-header-nav" style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 14, fontWeight: 700 }}>
+            <a className="home-header-cta" href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ background: "#B64A22", color: "#FFFFFF", textDecoration: "none", padding: "11px 18px", borderRadius: 8 }}>Book a workflow call</a>
           </nav>
         </div>
       </header>
 
-      <section style={{ position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 80% -10%, #FBEFE3 0%, rgba(251,239,227,0) 55%), radial-gradient(90% 80% at -5% 110%, #F7E6DA 0%, rgba(247,230,218,0) 50%)", pointerEvents: "none" }} />
-        <div className="home-hero-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(54px,8vw,96px) 28px clamp(56px,7vw,92px)", position: "relative", display: "grid", gridTemplateColumns: "minmax(0, 1.15fr) minmax(280px, 0.85fr)", gap: "clamp(32px,6vw,72px)", alignItems: "center" }}>
+      <section style={{ background: "#F6F6F1", borderBottom: "1px solid #DEDFD8" }}>
+        <div className="home-hero-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(48px,7vw,92px) 28px clamp(48px,7vw,86px)", display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(300px, 0.9fr)", gap: "clamp(32px,6vw,68px)", alignItems: "center" }}>
           <div>
-            <p className="home-hero-eyebrow" style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Brooker Systems // software + automation + AI integration</p>
-            <h1 className="home-hero-title" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2.7rem,6vw,5rem)", lineHeight: 1.02, letterSpacing: "-0.04em", margin: 0, maxWidth: "13ch" }}>
-              I build software that removes repetitive computer work.
+            <p className="home-hero-eyebrow" style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Agents // automations // workflow systems</p>
+            <h1 className="home-hero-title" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(2.75rem,6vw,5.2rem)", lineHeight: 1.01, letterSpacing: "0", margin: 0, maxWidth: "12ch" }}>
+              I build systems for work that should not stay manual.
             </h1>
-            <p style={{ fontSize: "clamp(1.08rem,1.7vw,1.3rem)", lineHeight: 1.55, color: "#574F42", margin: "24px 0 0", maxWidth: "68ch" }}>
-              I help businesses build better software, automate repetitive work, connect disjointed systems, clean up messy data and integrate AI into real workflows.
+            <p style={{ fontSize: "clamp(1.08rem,1.6vw,1.28rem)", lineHeight: 1.58, color: "#4B535C", margin: "24px 0 0", maxWidth: "68ch" }}>
+              I help businesses turn messy processes into agents, automations, internal tools and reviewable workflows. The goal is simple: less scattered human effort, cleaner handoffs and systems your team can actually rely on.
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 34 }}>
-              <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, boxShadow: "0 10px 24px -10px rgba(196,78,30,0.7)" }}>Show me the problem →</a>
-              <a href="#services" style={{ display: "inline-flex", alignItems: "center", gap: 9, background: "#FFFFFF", color: "#211C15", textDecoration: "none", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, border: "1px solid #E0D6C4" }}>See what I can build</a>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
+              <a href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>Book a 20-minute workflow call</a>
+              <a href="#systems" style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", color: "#1A1C20", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, border: "1px solid #D7D9D2" }}>What I build</a>
             </div>
           </div>
 
-          <aside className="home-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
-            <div className="home-profile-row" style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
-              <img className="home-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "center 26%", border: "1px solid #E7DECE" }} />
+          <aside className="home-profile-card" style={{ background: "#FFFFFF", border: "1px solid #DADDD6", borderRadius: 8, padding: 24, boxShadow: "0 24px 55px -42px rgba(26,28,32,0.45)" }}>
+            <div className="home-profile-row" style={{ display: "grid", gridTemplateColumns: "132px minmax(0, 1fr)", gap: 20, alignItems: "center", marginBottom: 22 }}>
+              <img className="home-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 132, height: 132, borderRadius: 8, objectFit: "cover", objectPosition: "center 24%", border: "1px solid #D7D9D2" }} />
               <div>
-                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em" }}>Max Brooker</p>
-                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity professional and automation expert.</p>
+                <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 8px" }}>Max Brooker</p>
+                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 28, letterSpacing: "0", lineHeight: 1.05 }}>Brooker Systems</p>
+                <p style={{ margin: "8px 0 0", color: "#59616A", fontSize: 16, lineHeight: 1.42 }}>Electrical engineering background, cybersecurity discipline, practical software builder.</p>
               </div>
             </div>
-            <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
-              I build practical software for businesses with disjointed computer work: automation systems, AI integrations, internal tools, data pipelines and the connective tissue between the tools you already use.
-            </p>
+            <div style={{ background: "#1A1C20", color: "#E7ECE7", borderRadius: 8, padding: 18 }}>
+              <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.55 }}>
+                I am strongest where AI meets real operations: structured inputs, bounded agents, deterministic checks, human approval and logs when something breaks.
+              </p>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section id="services" style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4", borderBottom: "1px solid #ECE3D4" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
-          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// what I can do</p>
-          <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2rem,4vw,3.2rem)", lineHeight: 1.06, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Software, automation, AI integration and the messy bits in between.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18, marginTop: 44 }}>
-            {capabilities.map((capability) => (
-              <div key={capability.title} style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 18, padding: 28 }}>
-                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: "1.35rem", letterSpacing: "-0.02em", margin: "0 0 10px", color: "#211C15" }}>{capability.title}</h3>
-                <p style={{ margin: 0, color: "#5C5446", lineHeight: 1.55, fontSize: 15.5 }}>{capability.copy}</p>
-              </div>
-            ))}
+      <section id="systems" style={{ background: "#FFFFFF", borderBottom: "1px solid #DEDFD8" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px" }}>
+          <div style={{ maxWidth: "68ch" }}>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>What I build</p>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
+              Software that systemises the work around your software.
+            </h2>
           </div>
-        </div>
-      </section>
-
-      <section id="work" style={{ background: "#F4EEE3" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
-          <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// what this can look like</p>
-          <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(2rem,4vw,3.2rem)", lineHeight: 1.06, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>A few ways this can show up inside a business.</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18, marginTop: 44 }}>
-            {systems.map((example) => (
-              <article key={example.title} style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 20, padding: 30, minHeight: 250 }}>
-                <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, color: "#B06B43", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 24px" }}>{example.label}</p>
-                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.55rem", lineHeight: 1.12, margin: "0 0 12px", letterSpacing: "-0.02em" }}>{example.title}</h3>
-                <p style={{ margin: 0, color: "#5C5446", lineHeight: 1.55 }}>{example.copy}</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18, marginTop: 40 }}>
+            {pillars.map((pillar) => (
+              <article key={pillar.title} style={{ background: "#F6F6F1", border: "1px solid #DADDD6", borderRadius: 8, padding: 24 }}>
+                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "1.55rem", lineHeight: 1.1, letterSpacing: "0", margin: "0 0 12px" }}>{pillar.title}</h3>
+                <p style={{ margin: 0, color: "#555E66", lineHeight: 1.58, fontSize: 15.8 }}>{pillar.copy}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" style={{ background: "#FBF7EF", borderTop: "1px solid #ECE3D4" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(64px,8vw,108px) 28px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "clamp(32px,6vw,72px)" }}>
-            <div>
-              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.02em", margin: "0 0 18px" }}>// contact</p>
-              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "clamp(1.9rem,3.6vw,2.9rem)", lineHeight: 1.08, letterSpacing: "-0.03em", margin: 0, maxWidth: "16ch" }}>Show me the problem.</h2>
-                          </div>
-            {submitted ? (
-              <div style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: "40px 32px", textAlign: "center", boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
-                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, color: "#211C15", fontSize: "1.4rem", margin: "0 0 8px" }}>Thanks — message sent.</h3>
-                <p style={{ margin: 0, color: "#5C5446", lineHeight: 1.55 }}>I will get back to you with a practical view on what is worth doing next.</p>
-              </div>
-            ) : (
-              <form onSubmit={onSubmit} style={{ background: "#FFFFFF", border: "1px solid #EBE2D2", borderRadius: 18, padding: 28, display: "flex", flexDirection: "column", gap: 16, boxShadow: "0 18px 40px -28px rgba(33,28,21,0.35)" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16 }}>
-                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Name</span>
-                    <input type="text" required value={formData.name} onChange={(event) => setFormData({ ...formData, name: event.target.value })} style={inputStyle} />
-                  </label>
-                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Email</span>
-                    <input type="email" required value={formData.email} onChange={(event) => setFormData({ ...formData, email: event.target.value })} style={inputStyle} />
-                  </label>
-                </div>
-                <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: "#211C15" }}>Message</span>
-                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me what is annoying, slow or error-prone." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
-                </label>
-                {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again.</p>}
-                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 9, background: "#C44E1E", color: "#FBF7EF", border: "none", fontFamily: "inherit", fontWeight: 600, fontSize: 16, padding: "15px 24px", borderRadius: 12, cursor: sending ? "wait" : "pointer", marginTop: 4 }}>{sending ? "Sending..." : "Show me the problem →"}</button>
-              </form>
-            )}
+      <section id="examples" style={{ background: "#F6F6F1", borderBottom: "1px solid #DEDFD8" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px", display: "grid", gridTemplateColumns: "minmax(240px, 0.72fr) minmax(0, 1.28fr)", gap: "clamp(28px,5vw,58px)", alignItems: "start" }}>
+          <div>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Examples</p>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.85rem,3.3vw,2.8rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
+              Not a chatbot. A workflow that does useful work.
+            </h2>
+            <p style={{ color: "#59616A", lineHeight: 1.62, margin: "18px 0 0", fontSize: 16.5 }}>
+              Good agents are narrow. They have inputs, rules, review points, outputs and failure modes.
+            </p>
+          </div>
+          <div style={{ display: "grid", gap: 14 }}>
+            {examples.map((example, index) => (
+              <article key={example} style={{ border: "1px solid #DADDD6", borderRadius: 8, padding: 20, background: "#FFFFFF", display: "grid", gridTemplateColumns: "44px minmax(0, 1fr)", gap: 16, alignItems: "start" }}>
+                <p style={{ fontFamily: "'Spline Sans Mono', monospace", color: "#B64A22", fontSize: 13, margin: 0 }}>{String(index + 1).padStart(2, "0")}</p>
+                <p style={{ margin: 0, color: "#252B31", fontSize: 16, lineHeight: 1.5 }}>{example}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <footer style={{ background: "#211C15", color: "#A89B86" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 28px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 48, height: 48, borderRadius: 0, objectFit: "contain" }} />
-            <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 17, color: "#F4EEE3" }}>Brooker Systems</span>
+      <section id="process" style={{ background: "#FFFFFF", borderBottom: "1px solid #DEDFD8" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px" }}>
+          <div style={{ maxWidth: "66ch" }}>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>How I work</p>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
+              Systemise first. Automate second.
+            </h2>
           </div>
-          <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Perth, Australia</p>
-          <p style={{ margin: 0, fontSize: 13, color: "#7C715F" }}>© 2026 Brooker Systems</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18, marginTop: 40 }}>
+            {process.map((step) => (
+              <article key={step.title} style={{ background: "#FFFFFF", border: "1px solid #DADDD6", borderRadius: 8, padding: 24 }}>
+                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "1.35rem", lineHeight: 1.15, letterSpacing: "0", margin: "0 0 10px" }}>{step.title}</h3>
+                <p style={{ margin: 0, color: "#555E66", lineHeight: 1.58, fontSize: 15.8 }}>{step.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="proof" style={{ background: "#F6F6F1", borderBottom: "1px solid #DEDFD8" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(52px,6vw,82px) 28px", display: "grid", gridTemplateColumns: "minmax(240px, 0.72fr) minmax(0, 1.28fr)", gap: "clamp(28px,5vw,58px)", alignItems: "start" }}>
+          <div>
+            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Proof shape</p>
+            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.7rem,3vw,2.4rem)", lineHeight: 1.1, letterSpacing: "0", margin: 0 }}>
+              Recent work has been in messy real-world systems.
+            </h2>
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+            {proof.map((item) => (
+              <span key={item} style={{ border: "1px solid #D7D9D2", borderRadius: 999, padding: "9px 13px", background: "#FFFFFF", color: "#303840", fontSize: 14.5, fontWeight: 700 }}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style={{ background: "#EDF4F0" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,98px) 28px" }}>
+          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
+            <div>
+              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Contact</p>
+              <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(2rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
+                Book a 20-minute workflow call.
+              </h2>
+              <p style={{ color: "#59616A", lineHeight: 1.62, margin: "18px auto 0", fontSize: 17, maxWidth: "58ch" }}>
+                Pick a time and add a few notes about the workflow, the tools involved and what would make the call useful. I will review it before we talk.
+              </p>
+              <a href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ display: "inline-flex", marginTop: 28, alignItems: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 17, padding: "16px 24px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>
+                Book a workflow call
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ background: "#1A1C20", color: "#ACB7B0" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "40px 28px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+            <img src="/brooker-mark.png" alt="" style={{ width: 44, height: 44, objectFit: "contain" }} />
+            <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 17, color: "#FFFFFF" }}>Brooker Systems</span>
+          </div>
+          <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Perth, Western Australia</p>
+          <p style={{ margin: 0, fontSize: 13, color: "#7E8983" }}>Copyright 2026 Brooker Systems</p>
         </div>
       </footer>
     </main>

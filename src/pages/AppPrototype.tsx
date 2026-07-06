@@ -56,7 +56,7 @@ const projects = [
     name: "Vocabull",
     href: "https://vocabull.app",
     label: "Niche software product",
-    copy: "A niche app idea turned into a live interactive product for reviewing and playing with saved Kindle words.",
+    copy: "A niche app idea turned into a live interactive product with accounts, data flows and a polished user experience.",
   },
 ];
 

@@ -22,7 +22,7 @@ const BackgroundSection = () => {
 
           <div className="text-left">
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-              I'm an <span className="text-foreground font-medium">Electrical Engineer</span> by trade with a lifelong habit of automating the work around me.
+              I'm a <span className="text-foreground font-medium">cyber security engineer</span> with software experience and a lifelong habit of automating the work around me.
             </p>
 
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">

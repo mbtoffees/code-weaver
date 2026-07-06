@@ -2,6 +2,34 @@ import { FormEvent, useState } from "react";
 
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
 const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
+const GOOGLE_ADS_LEAD_CONVERSION = "AW-18270478625/Sp1XCPPchcUcEKHChYhE";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const trackLeadConversion = () => {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") return Promise.resolve();
+
+  return new Promise<void>((resolve) => {
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      resolve();
+    };
+
+    window.setTimeout(finish, 1000);
+    window.gtag?.("event", "conversion", {
+      send_to: GOOGLE_ADS_LEAD_CONVERSION,
+      value: 1.0,
+      currency: "AUD",
+      event_callback: finish,
+    });
+  });
+};
 
 const deliverables = [
   "A live, working web app you can send to customers, investors or your team",
@@ -30,6 +58,12 @@ const projects = [
     label: "Kindle vocabulary product",
     copy: "A niche app idea turned into a live interactive product for reviewing and playing with saved Kindle words.",
   },
+];
+
+const trustSignals = [
+  "Live products delivered across SaaS, sports science, service-business and vocabulary-learning workflows",
+  "Typical focused prototype builds start from A$3k+ depending on scope",
+  "Perth-based solo builder with electrical engineering and cybersecurity experience",
 ];
 
 const steps = [
@@ -81,6 +115,7 @@ const AppPrototype = () => {
 
       if (!res.ok) throw new Error("Failed to send");
 
+      await trackLeadConversion();
       setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
       window.location.assign("/thank-you");
@@ -110,11 +145,19 @@ const AppPrototype = () => {
           <div>
             <p className="home-hero-eyebrow" style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>App prototypes // MVPs // product ideas</p>
             <h1 className="home-hero-title" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(2.75rem,6vw,5.2rem)", lineHeight: 1.01, letterSpacing: 0, margin: 0, maxWidth: "12ch" }}>
-              Bring your app idea to life in a week.
+              Bring your app idea to life in about a week.
             </h1>
             <p style={{ fontSize: "clamp(1.08rem,1.6vw,1.28rem)", lineHeight: 1.58, color: "#4B535C", margin: "24px 0 0", maxWidth: "68ch" }}>
               I build high-quality apps and prototypes very quickly for founders, consultants and small teams. I'm Perth-based and use the latest tools, AI-assisted development and rigorous testing workflows to turn rough ideas into polished working products without agency overhead.
             </p>
+            <div style={{ display: "grid", gap: 10, marginTop: 24, maxWidth: 760 }}>
+              {trustSignals.map((signal) => (
+                <div key={signal} style={{ display: "flex", gap: 10, alignItems: "flex-start", color: "#303840", fontSize: 15.5, lineHeight: 1.45 }}>
+                  <span aria-hidden="true" style={{ color: "#0E6C5D", fontWeight: 900, lineHeight: 1.3 }}>✓</span>
+                  <span>{signal}</span>
+                </div>
+              ))}
+            </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
               <a href="#contact" style={{ display: "inline-flex", alignItems: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>Tell me your idea</a>
               <a href="#examples" style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", color: "#1A1C20", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, border: "1px solid #D7D9D2" }}>See live examples</a>
@@ -240,7 +283,7 @@ const AppPrototype = () => {
                 </label>
                 {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again or book a call instead.</p>}
                 <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#B64A22", color: "#FFFFFF", border: "none", fontFamily: "inherit", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, cursor: sending ? "wait" : "pointer" }}>{sending ? "Sending..." : "Send the idea"}</button>
-                <a href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ textAlign: "center", color: "#0E6C5D", fontWeight: 750, textDecoration: "none", fontSize: 15 }}>Or book a 20-minute call</a>
+                <a href={BOOKING_URL} target="_blank" rel="noreferrer" onClick={() => void trackLeadConversion()} style={{ textAlign: "center", color: "#0E6C5D", fontWeight: 750, textDecoration: "none", fontSize: 15 }}>Or book a 20-minute call</a>
               </form>
             )}
           </div>

@@ -275,8 +275,8 @@ const AppPrototype = () => {
                   </label>
                 </div>
                 <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1C20" }}>What is the app idea?</span>
-                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="What should it do, who is it for, and what would make it valuable?" style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
+                  <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1C20" }}>Tell me about it</span>
+                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
                 </label>
                 {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again or book a call instead.</p>}
                 <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#B64A22", color: "#FFFFFF", border: "none", fontFamily: "inherit", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, cursor: sending ? "wait" : "pointer" }}>{sending ? "Sending..." : "Send the idea"}</button>

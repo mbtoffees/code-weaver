@@ -55,15 +55,15 @@ const projects = [
   {
     name: "Vocabull",
     href: "https://vocabull.app",
-    label: "Kindle vocabulary product",
+    label: "Niche software product",
     copy: "A niche app idea turned into a live interactive product for reviewing and playing with saved Kindle words.",
   },
 ];
 
 const trustSignals = [
-  "Live products delivered across SaaS, sports science, service-business and vocabulary-learning workflows",
+  "I build across many domains, from SaaS and service-business workflows to specialist product ideas",
   "Typical focused prototype builds start from A$3k+ depending on scope",
-  "Perth-based solo builder with electrical engineering and cybersecurity experience",
+  "Perth-based solo builder with cyber security and software experience",
 ];
 
 const steps = [
@@ -169,12 +169,12 @@ const AppPrototype = () => {
               <img className="home-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 132, height: 132, borderRadius: 8, objectFit: "cover", objectPosition: "center 24%", border: "1px solid #D7D9D2" }} />
               <div>
                 <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 8px" }}>Max Brooker</p>
-                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 28, lineHeight: 1.05 }}>Electrical engineer, cybersecurity background, app builder.</p>
+                <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 28, lineHeight: 1.05 }}>Cyber security engineer, software builder.</p>
               </div>
             </div>
             <div style={{ background: "#1A1C20", color: "#E7ECE7", borderRadius: 8, padding: 18 }}>
               <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.55 }}>
-                I am an electrical engineer with cybersecurity experience. Now I build apps and web products for people, and I have become very good at turning ideas into polished, working software quickly.
+                I am a cyber security engineer with software experience. Now I build apps and web products for people, and I have become very good at turning ideas into polished, working software quickly.
               </p>
             </div>
           </aside>

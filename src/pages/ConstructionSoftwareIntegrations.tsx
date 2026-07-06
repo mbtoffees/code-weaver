@@ -149,7 +149,7 @@ const ConstructionSoftwareIntegrations = () => {
               </div>
             </div>
             <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>
-              Electrical engineer turned cybersecurity professional and automation expert. I build practical automation and internal software for construction businesses with repeated admin work, awkward software handoffs and systems that need to talk to each other.
+              Cyber security engineer, software builder and automation expert. I build practical automation and internal software for construction businesses with repeated admin work, awkward software handoffs and systems that need to talk to each other.
             </p>
           </aside>
         </div>

@@ -83,7 +83,7 @@ const Index = () => {
               <div>
                 <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 8px" }}>Max Brooker</p>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 28, letterSpacing: "0", lineHeight: 1.05 }}>Brooker Systems</p>
-                <p style={{ margin: "8px 0 0", color: "#59616A", fontSize: 16, lineHeight: 1.42 }}>Electrical engineering background, cybersecurity discipline, practical software builder.</p>
+                <p style={{ margin: "8px 0 0", color: "#59616A", fontSize: 16, lineHeight: 1.42 }}>Cyber security background, software experience, practical software builder.</p>
               </div>
             </div>
             <div style={{ background: "#1A1C20", color: "#E7ECE7", borderRadius: 8, padding: 18 }}>

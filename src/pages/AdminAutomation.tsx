@@ -133,7 +133,7 @@ const AdminAutomation = () => {
               <img className="admin-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
               <div>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>Max Brooker</p>
-                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Electrical engineer turned cybersecurity professional and automation expert.</p>
+                <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Cyber security engineer, software builder and automation expert.</p>
               </div>
             </div>
             <p style={{ margin: 0, color: "#574F42", lineHeight: 1.6, fontSize: 16 }}>

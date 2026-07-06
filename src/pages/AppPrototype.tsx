@@ -44,12 +44,12 @@ const projects = [
     name: "Equilytics",
     href: "https://equilytics.com.au",
     label: "Sports science platform",
-    copy: "A specialist platform turning training plans, performance data and stable workflows into a usable product experience.",
+    copy: "A horse performance platform using clever data analytics and AI to turn training plans, performance data and stable workflows into a usable product experience.",
   },
   {
     name: "Client Ready Solutions",
     href: "https://clientreadysolutions.com.au",
-    label: "Service-business web presence",
+    label: "Accounting software",
     copy: "A polished, conversion-focused site built around trust, clarity and making the next enquiry easy.",
   },
   {

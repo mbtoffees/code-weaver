@@ -77,7 +77,7 @@ const steps = [
   },
   {
     title: "You get a live link",
-    copy: "Within about a week, you have something real to use, show, test, improve and keep building from.",
+    copy: "You get something real to use, show, test, improve and keep building from — as quickly as the scope allows.",
   },
 ];
 
@@ -145,7 +145,7 @@ const AppPrototype = () => {
           <div>
             <p className="home-hero-eyebrow" style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>App prototypes // MVPs // product ideas</p>
             <h1 className="home-hero-title" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(2.75rem,6vw,5.2rem)", lineHeight: 1.01, letterSpacing: 0, margin: 0, maxWidth: "12ch" }}>
-              Bring your app idea to life in about a week.
+              Turn your app idea into a working product fast.
             </h1>
             <p style={{ fontSize: "clamp(1.08rem,1.6vw,1.28rem)", lineHeight: 1.58, color: "#4B535C", margin: "24px 0 0", maxWidth: "68ch" }}>
               I build high-quality apps and prototypes very quickly for founders, consultants and small teams. I'm Perth-based and use the latest tools, AI-assisted development and rigorous testing workflows to turn rough ideas into polished working products without agency overhead.

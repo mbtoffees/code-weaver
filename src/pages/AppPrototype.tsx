@@ -158,9 +158,9 @@ const AppPrototype = () => {
                 </div>
               ))}
             </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
-              <a href="#contact" style={{ display: "inline-flex", alignItems: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>Tell me your idea</a>
-              <a href="#examples" style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", color: "#1A1C20", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, border: "1px solid #D7D9D2" }}>See live examples</a>
+            <div className="home-hero-actions" style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
+              <a className="home-hero-action" href="#contact" style={{ display: "inline-flex", alignItems: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>Tell me your idea</a>
+              <a className="home-hero-action" href="#examples" style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", color: "#1A1C20", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, border: "1px solid #D7D9D2" }}>See live examples</a>
             </div>
           </div>
 
@@ -182,7 +182,7 @@ const AppPrototype = () => {
       </section>
 
       <section id="offer" style={{ background: "#FFFFFF", borderBottom: "1px solid #DEDFD8" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px", display: "grid", gridTemplateColumns: "minmax(240px, 0.75fr) minmax(0, 1.25fr)", gap: "clamp(28px,5vw,58px)", alignItems: "start" }}>
+        <div className="app-offer-grid" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px", display: "grid", gridTemplateColumns: "minmax(240px, 0.75fr) minmax(0, 1.25fr)", gap: "clamp(28px,5vw,58px)", alignItems: "start" }}>
           <div>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>What you get</p>
             <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, margin: 0 }}>
@@ -192,9 +192,9 @@ const AppPrototype = () => {
               Best for people who want a serious builder to move quickly, make smart product decisions and deliver something real without months of back-and-forth.
             </p>
           </div>
-          <div style={{ display: "grid", gap: 14 }}>
+          <div className="app-offer-cards" style={{ display: "grid", gap: 14 }}>
             {deliverables.map((item, index) => (
-              <article key={item} style={{ border: "1px solid #DADDD6", borderRadius: 8, padding: 20, background: "#F6F6F1", display: "grid", gridTemplateColumns: "44px minmax(0, 1fr)", gap: 16, alignItems: "start" }}>
+              <article className="app-offer-card" key={item} style={{ border: "1px solid #DADDD6", borderRadius: 8, padding: 20, background: "#F6F6F1", display: "grid", gridTemplateColumns: "44px minmax(0, 1fr)", gap: 16, alignItems: "start" }}>
                 <p style={{ fontFamily: "'Spline Sans Mono', monospace", color: "#B64A22", fontSize: 13, margin: 0 }}>{String(index + 1).padStart(2, "0")}</p>
                 <p style={{ margin: 0, color: "#252B31", fontSize: 16, lineHeight: 1.5 }}>{item}</p>
               </article>

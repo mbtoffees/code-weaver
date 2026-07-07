@@ -141,6 +141,25 @@
     padding: 44px 22px 56px !important;
     gap: 34px !important;
     align-items: start !important;
+    box-sizing: border-box;
+    max-width: 100vw !important;
+    overflow-x: clip;
+  }
+
+  .home-hero-inner > * {
+    min-width: 0;
+  }
+
+  .home-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-hero-action {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
   }
 
   .home-hero-eyebrow {
@@ -158,12 +177,13 @@
 
   .home-profile-card {
     width: 100% !important;
+    box-sizing: border-box;
     padding: 24px !important;
     border-radius: 20px !important;
   }
 
   .home-profile-row {
-    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
     align-items: flex-start !important;
     gap: 16px !important;
   }
@@ -225,7 +245,15 @@
 
 @media (max-width: 860px) {
   .home-hero-inner,
+  .home-public-work-intro,
+  .home-split-section,
   .landing-hero-inner {
     grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 861px) {
+  .home-single-line-heading {
+    white-space: nowrap;
   }
 }

@@ -1,35 +1,38 @@
+import { FormEvent, useState } from "react";
+
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
+const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
 
 const pillars = [
   {
-    title: "Agents",
-    copy: "Practical AI agents that read, classify, check, draft, route and report inside real business workflows.",
+    title: "Business systems",
+    copy: "Custom software that turns repeated business processes into clear screens, structured data, reliable handoffs and useful outputs.",
   },
   {
-    title: "Automations",
-    copy: "Reliable systems for the repetitive work: copying, checking, renaming, reconciling, filing, chasing and updating records.",
+    title: "Agents and automations",
+    copy: "Reliable 24/7 workflows for reading, checking, classifying, filing, reconciling, chasing and keeping records aligned across tools.",
   },
   {
-    title: "Workflow systems",
-    copy: "Internal tools, portals and dashboards that turn scattered process knowledge into something your team can actually run.",
+    title: "Apps and portals",
+    copy: "Customer portals, dashboards, internal tools and full web applications built around the way your business actually works.",
   },
 ];
 
 const examples = [
-  "An agent reads inbox items, classifies them, extracts the useful fields and sends edge cases to a review queue.",
-  "A workflow checks PDFs, quotes or forms against rules, then produces a structured report instead of loose AI prose.",
-  "A dashboard shows exceptions across jobs, invoices, documents and data quality so people know what to fix next.",
-  "A system connects the tools you already use, keeps records aligned and logs what happened when something fails.",
+  "A business process becomes a small internal app instead of another spreadsheet, inbox thread or manual checklist.",
+  "An AI workflow reads documents, extracts useful fields, checks them against rules and sends edge cases to a person.",
+  "A dashboard shows exceptions across jobs, invoices, documents and data quality so the team knows what to fix next.",
+  "A customer-facing app or portal gives clients a cleaner way to submit information, track progress or use your service.",
 ];
 
 const process = [
   {
-    title: "Map the workflow",
-    copy: "We work out what starts the process, who touches it, where data moves, where judgement is needed and where mistakes happen.",
+    title: "Understand what you need built",
+    copy: "We work through the process, app idea, customer journey or repeated task, then decide what the smallest useful version should do.",
   },
   {
-    title: "Systemise the steps",
-    copy: "I split the work into deterministic checks, AI-assisted parts, human approvals, logs and outputs your team can trust.",
+    title: "Design the right system",
+    copy: "I split the work into screens, data flows, automations, AI-assisted parts, security boundaries, review points and outputs your team can trust.",
   },
   {
     title: "Build the smallest useful version",
@@ -37,16 +40,70 @@ const process = [
   },
 ];
 
-const proof = [
-  "AI document extraction and review pipelines",
-  "Simpro, Procore, Zoho and Microsoft 365 automations",
-  "Quote compliance and spec-checking workflows",
-  "Inbox triage, invoice checks and approval queues",
-  "Operational dashboards and exception reports",
-  "Internal tools for messy spreadsheet processes",
+const publicWork = [
+  {
+    name: "Equilytics",
+    href: "https://equilytics.com.au",
+    label: "Custom app",
+    copy: "A specialist platform for training plans, performance data and stable operations.",
+  },
+  {
+    name: "Client Ready Solutions",
+    href: "https://clientreadysolutions.com.au",
+    label: "Business website",
+    copy: "A polished site for an accounting software and client-readiness service.",
+  },
+  {
+    name: "Vocabull",
+    href: "https://vocabull.app",
+    label: "Software product",
+    copy: "A live interactive product with accounts, data flows and a focused user experience.",
+  },
 ];
 
+const inputStyle = {
+  fontFamily: "inherit",
+  fontSize: 15,
+  color: "#1A1C20",
+  padding: "12px 13px",
+  border: "1px solid #D7D9D2",
+  borderRadius: 8,
+  background: "#FFFFFF",
+  outline: "none",
+} as const;
+
 const Index = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSending(true);
+    setError(false);
+
+    try {
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          message: `[Homepage enquiry]\n\n${formData.message}`,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <main style={{ minHeight: "100vh", background: "#F6F6F1", color: "#1A1C20", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(246,246,241,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #DEDFD8" }}>
@@ -56,7 +113,7 @@ const Index = () => {
             <span className="home-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 750, fontSize: 20, letterSpacing: "0" }}>Brooker Systems</span>
           </a>
           <nav className="home-header-nav" style={{ display: "flex", alignItems: "center", gap: 18, fontSize: 14, fontWeight: 700 }}>
-            <a className="home-header-cta" href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ background: "#B64A22", color: "#FFFFFF", textDecoration: "none", padding: "11px 18px", borderRadius: 8 }}>Book a workflow call</a>
+            <a className="home-header-cta" href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ background: "#B64A22", color: "#FFFFFF", textDecoration: "none", padding: "11px 18px", borderRadius: 8 }}>Book a call</a>
           </nav>
         </div>
       </header>
@@ -64,16 +121,16 @@ const Index = () => {
       <section style={{ background: "#F6F6F1", borderBottom: "1px solid #DEDFD8" }}>
         <div className="home-hero-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(48px,7vw,92px) 28px clamp(48px,7vw,86px)", display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(300px, 0.9fr)", gap: "clamp(32px,6vw,68px)", alignItems: "center" }}>
           <div>
-            <p className="home-hero-eyebrow" style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Agents // automations // workflow systems</p>
+            <p className="home-hero-eyebrow" style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 20px" }}>Apps // agents // automations // internal tools</p>
             <h1 className="home-hero-title" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(2.75rem,6vw,5.2rem)", lineHeight: 1.01, letterSpacing: "0", margin: 0, maxWidth: "12ch" }}>
-              I build systems for work that should not stay manual.
+              I build software systems for your business.
             </h1>
             <p style={{ fontSize: "clamp(1.08rem,1.6vw,1.28rem)", lineHeight: 1.58, color: "#4B535C", margin: "24px 0 0", maxWidth: "68ch" }}>
-              I help businesses turn messy processes into agents, automations, internal tools and reviewable workflows. The goal is simple: less scattered human effort, cleaner handoffs and systems your team can actually rely on.
+              I help businesses turn ideas, processes and repeated work into apps, agents, automations and internal tools. The goal is simple: useful software that saves time, improves handoffs and gives your team room to scale.
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
-              <a href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>Book a 20-minute workflow call</a>
-              <a href="#systems" style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", color: "#1A1C20", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, border: "1px solid #D7D9D2" }}>What I build</a>
+            <div className="home-hero-actions" style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
+              <a className="home-hero-action" href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>Book a 20-minute call</a>
+              <a className="home-hero-action" href="#contact" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#FFFFFF", color: "#1A1C20", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, border: "1px solid #D7D9D2" }}>Send an enquiry</a>
             </div>
           </div>
 
@@ -83,12 +140,12 @@ const Index = () => {
               <div>
                 <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 8px" }}>Max Brooker</p>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 28, letterSpacing: "0", lineHeight: 1.05 }}>Brooker Systems</p>
-                <p style={{ margin: "8px 0 0", color: "#59616A", fontSize: 16, lineHeight: 1.42 }}>Cyber security background, software experience, practical software builder.</p>
+                <p style={{ margin: "8px 0 0", color: "#59616A", fontSize: 16, lineHeight: 1.42 }}>Cyber security engineer, software developer and practical systems builder.</p>
               </div>
             </div>
             <div style={{ background: "#1A1C20", color: "#E7ECE7", borderRadius: 8, padding: 18 }}>
               <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.55 }}>
-                I am strongest where AI meets real operations: structured inputs, bounded agents, deterministic checks, human approval and logs when something breaks.
+                I build across the whole stack: polished web apps, secure portals, integrations, AI-assisted workflows and the operational details that make software reliable after launch.
               </p>
             </div>
           </aside>
@@ -97,10 +154,10 @@ const Index = () => {
 
       <section id="systems" style={{ background: "#FFFFFF", borderBottom: "1px solid #DEDFD8" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px" }}>
-          <div style={{ maxWidth: "68ch" }}>
+          <div>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>What I build</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
-              Software that systemises the work around your software.
+            <h2 className="home-single-line-heading" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
+              Software for the work your business needs done.
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18, marginTop: 40 }}>
@@ -115,14 +172,14 @@ const Index = () => {
       </section>
 
       <section id="examples" style={{ background: "#F6F6F1", borderBottom: "1px solid #DEDFD8" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px", display: "grid", gridTemplateColumns: "minmax(240px, 0.72fr) minmax(0, 1.28fr)", gap: "clamp(28px,5vw,58px)", alignItems: "start" }}>
+        <div className="home-split-section" style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px", display: "grid", gridTemplateColumns: "minmax(240px, 0.72fr) minmax(0, 1.28fr)", gap: "clamp(28px,5vw,58px)", alignItems: "start" }}>
           <div>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Examples</p>
             <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.85rem,3.3vw,2.8rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
-              Not a chatbot. A workflow that does useful work.
+              The shape depends on the job.
             </h2>
             <p style={{ color: "#59616A", lineHeight: 1.62, margin: "18px 0 0", fontSize: 16.5 }}>
-              Good agents are narrow. They have inputs, rules, review points, outputs and failure modes.
+              Sometimes the answer is an automation. Sometimes it is an AI-assisted review workflow. Sometimes it is a full app, portal or dashboard.
             </p>
           </div>
           <div style={{ display: "grid", gap: 14 }}>
@@ -138,10 +195,10 @@ const Index = () => {
 
       <section id="process" style={{ background: "#FFFFFF", borderBottom: "1px solid #DEDFD8" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px" }}>
-          <div style={{ maxWidth: "66ch" }}>
+          <div>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>How I work</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
-              Systemise first. Automate second.
+            <h2 className="home-single-line-heading" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
+              Understand first. Build second.
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18, marginTop: 40 }}>
@@ -155,19 +212,27 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="proof" style={{ background: "#F6F6F1", borderBottom: "1px solid #DEDFD8" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(52px,6vw,82px) 28px", display: "grid", gridTemplateColumns: "minmax(240px, 0.72fr) minmax(0, 1.28fr)", gap: "clamp(28px,5vw,58px)", alignItems: "start" }}>
-          <div>
-            <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Proof shape</p>
-            <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.7rem,3vw,2.4rem)", lineHeight: 1.1, letterSpacing: "0", margin: 0 }}>
-              Recent work has been in messy real-world systems.
-            </h2>
+      <section id="public-work" style={{ background: "#FFFFFF", borderBottom: "1px solid #DEDFD8" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,96px) 28px" }}>
+          <div className="home-public-work-intro" style={{ display: "grid", gridTemplateColumns: "minmax(300px, 0.82fr) minmax(320px, 1fr)", gap: "clamp(28px,5vw,58px)", alignItems: "end" }}>
+            <div>
+              <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Public work</p>
+              <h2 className="home-single-line-heading" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
+                I also build full apps.
+              </h2>
+            </div>
+            <p style={{ color: "#59616A", lineHeight: 1.62, margin: 0, fontSize: 16.5, maxWidth: "60ch" }}>
+              Public examples of the same core skill: turning a business idea, workflow or product concept into usable software.
+            </p>
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-            {proof.map((item) => (
-              <span key={item} style={{ border: "1px solid #D7D9D2", borderRadius: 999, padding: "9px 13px", background: "#FFFFFF", color: "#303840", fontSize: 14.5, fontWeight: 700 }}>
-                {item}
-              </span>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18, marginTop: 40 }}>
+            {publicWork.map((project) => (
+              <a key={project.name} href={project.href} target="_blank" rel="noreferrer" style={{ display: "flex", flexDirection: "column", minHeight: 230, background: "#F6F6F1", border: "1px solid #DADDD6", borderRadius: 8, padding: 24, textDecoration: "none", color: "#1A1C20" }}>
+                <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>{project.label}</p>
+                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "1.7rem", lineHeight: 1.05, margin: "0 0 14px" }}>{project.name}</h3>
+                <p style={{ margin: 0, color: "#555E66", lineHeight: 1.58, fontSize: 15.8 }}>{project.copy}</p>
+                <span style={{ marginTop: "auto", paddingTop: 24, color: "#B64A22", fontWeight: 750, fontSize: 15 }}>Open project</span>
+              </a>
             ))}
           </div>
         </div>
@@ -175,19 +240,44 @@ const Index = () => {
 
       <section id="contact" style={{ background: "#EDF4F0" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "clamp(58px,7vw,98px) 28px" }}>
-          <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
-            <div>
+          <div style={{ maxWidth: 760, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: 30 }}>
               <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Contact</p>
               <h2 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(2rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
-                Book a 20-minute workflow call.
+                Book a call or send the idea through.
               </h2>
-              <p style={{ color: "#59616A", lineHeight: 1.62, margin: "18px auto 0", fontSize: 17, maxWidth: "58ch" }}>
-                Pick a time and add a few notes about the workflow, the tools involved and what would make the call useful. I will review it before we talk.
-              </p>
-              <a href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ display: "inline-flex", marginTop: 28, alignItems: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 17, padding: "16px 24px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>
-                Book a workflow call
-              </a>
             </div>
+
+            {submitted ? (
+              <div style={{ background: "#FFFFFF", border: "1px solid #DADDD6", borderRadius: 8, padding: "38px 28px", textAlign: "center" }}>
+                <h3 style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "1.45rem", margin: "0 0 8px" }}>Thanks. I have your message.</h3>
+                <p style={{ margin: 0, color: "#59616A", lineHeight: 1.55 }}>I will come back with a practical view of what could be automated or built.</p>
+              </div>
+            ) : (
+              <form onSubmit={onSubmit} style={{ background: "#FFFFFF", border: "1px solid #DADDD6", borderRadius: 8, padding: 24, display: "flex", flexDirection: "column", gap: 16, boxShadow: "0 18px 40px -34px rgba(26,28,32,0.55)" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, alignItems: "start" }}>
+                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1C20" }}>Name</span>
+                    <input type="text" required value={formData.name} onChange={(event) => setFormData({ ...formData, name: event.target.value })} style={inputStyle} />
+                  </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1C20" }}>Email</span>
+                    <input type="email" required value={formData.email} onChange={(event) => setFormData({ ...formData, email: event.target.value })} style={inputStyle} />
+                  </label>
+                  <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1C20" }}>Phone <span style={{ color: "#7E8983", fontWeight: 500 }}>(optional)</span></span>
+                    <input type="tel" value={formData.phone} onChange={(event) => setFormData({ ...formData, phone: event.target.value })} style={inputStyle} />
+                  </label>
+                </div>
+                <label style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1C20" }}>What do you want built or improved?</span>
+                  <textarea required rows={5} value={formData.message} onChange={(event) => setFormData({ ...formData, message: event.target.value })} placeholder="Tell me about the app, workflow, tools involved, or business process you want to improve." style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }} />
+                </label>
+                {error && <p style={{ margin: 0, color: "#B42318", fontSize: 14 }}>Something went wrong. Please try again or book a call instead.</p>}
+                <button type="submit" disabled={sending} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#B64A22", color: "#FFFFFF", border: "none", fontFamily: "inherit", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, cursor: sending ? "wait" : "pointer" }}>{sending ? "Sending..." : "Send enquiry"}</button>
+                <a href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ textAlign: "center", color: "#0E6C5D", fontWeight: 750, textDecoration: "none", fontSize: 15 }}>Or book a 20-minute call</a>
+              </form>
+            )}
           </div>
         </div>
       </section>

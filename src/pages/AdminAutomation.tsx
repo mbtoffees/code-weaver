@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import SEO, { serviceJsonLd } from "@/components/SEO";
 
 const problemExamples = [
   "Someone re-types data from one system into another every day.",
@@ -103,6 +104,12 @@ const AdminAutomation = () => {
 
   return (
     <main style={{ minHeight: "100vh", background: "#F4EEE3", color: "#211C15", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
+      <SEO
+        title="Business Automation Consultant Australia | Brooker Systems"
+        description="Practical automation for repeated computer work, reports, spreadsheets, documents and business systems. Built by Brooker Systems in Australia."
+        path="/admin-automation"
+        jsonLd={serviceJsonLd("Business Automation", "Practical automation for repeated computer work, reports, spreadsheets, documents and business systems.", "/admin-automation")}
+      />
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.86)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
         <div className="admin-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>

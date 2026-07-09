@@ -1,4 +1,4 @@
-# Google Ads Probe — Construction Software Integrations
+# Google Ads Probe - Construction Software Integrations
 
 Date: 2026-06-24
 Landing page: `/construction-software-integrations`
@@ -33,7 +33,7 @@ Location: Start with Perth/WA or Australia depending Keyword Planner volume.
 Network: Google Search only. Turn off Display Network.
 Goal: Leads / form submits if conversion tracking is ready; otherwise track email/form manually.
 
-### Ad group 1 — Construction workflow automation
+### Ad group 1 - Construction workflow automation
 
 Use if Keyword Planner shows volume for generic construction/service automation terms.
 
@@ -72,7 +72,7 @@ Connect job systems, CRMs, emails, spreadsheets and dashboards. Custom workflow 
 Show me the manual process wasting time. I build practical API integrations, dashboards and review workflows around your existing tools.
 ```
 
-### Ad group 2 — SimPro / field service
+### Ad group 2 - SimPro / field service
 
 Use only if there is actual search volume.
 
@@ -102,7 +102,7 @@ Descriptions:
 Need SimPro to talk to your CRM, email, dashboards or spreadsheets? Custom integrations and reporting workflows.
 ```
 
-### Ad group 3 — Procore
+### Ad group 3 - Procore
 
 Use only if there is actual search volume.
 
@@ -132,7 +132,7 @@ Descriptions:
 Custom dashboards, data syncs and workflow automation around Procore and your other business systems.
 ```
 
-### Ad group 4 — Zoho / CRM / reporting
+### Ad group 4 - Zoho / CRM / reporting
 
 This may be better-volume and more commercial than Procore/SimPro in Australia.
 
@@ -162,7 +162,7 @@ Descriptions:
 Custom Zoho integrations, dashboards and workflow tools for messy operations, reporting and handoffs.
 ```
 
-### Ad group 5 — broader automation fallback
+### Ad group 5 - broader automation fallback
 
 Use only if the construction/tool-specific terms are too quiet.
 

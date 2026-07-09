@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import SEO, { serviceJsonLd } from "@/components/SEO";
 
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
 const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
@@ -34,7 +35,7 @@ const trackLeadConversion = () => {
 const deliverables = [
   "A live, working web app you can send to customers, investors or your team",
   "Fast iteration using modern AI-assisted development, testing and delivery workflows",
-  "Clean product design, practical user flows and real functionality — not just a mockup",
+  "Clean product design, practical user flows and real functionality - not just a mockup",
   "Auth, forms, dashboards, data flows, integrations or AI features where the product needs them",
   "A builder who can move quickly without the layers, meetings and overhead of a traditional agency",
 ];
@@ -77,7 +78,7 @@ const steps = [
   },
   {
     title: "You get a live link",
-    copy: "You get something real to use, show, test, improve and keep building from — as quickly as the scope allows.",
+    copy: "You get something real to use, show, test, improve and keep building from - as quickly as the scope allows.",
   },
 ];
 
@@ -128,6 +129,12 @@ const AppPrototype = () => {
 
   return (
     <main style={{ minHeight: "100vh", background: "#F6F6F1", color: "#1A1C20", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
+      <SEO
+        title="App Prototype Development Australia | Brooker Systems"
+        description="Turn an app idea into a polished working prototype. Brooker Systems builds fast app prototypes and MVPs for Australian founders, consultants and small teams."
+        path="/app-prototype"
+        jsonLd={serviceJsonLd("App Prototype Development", "Fast app prototype and MVP builds for Australian founders, consultants and small teams.", "/app-prototype")}
+      />
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(246,246,241,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #DEDFD8" }}>
         <div className="home-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#1A1C20" }}>

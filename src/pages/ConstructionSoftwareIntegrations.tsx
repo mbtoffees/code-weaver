@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import SEO, { serviceJsonLd } from "@/components/SEO";
 
 const problemExamples = [
   "Site staff re-type delivery dockets into your accounting system every afternoon.",
@@ -109,6 +110,12 @@ const ConstructionSoftwareIntegrations = () => {
 
   return (
     <main style={{ minHeight: "100vh", background: "#F4EEE3", color: "#211C15", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
+      <SEO
+        title="Construction Software Automation WA | Brooker Systems"
+        description="Automation and software integrations for WA construction businesses. Connect tools, reduce repeated admin and build practical internal workflows."
+        path="/construction-software-integrations"
+        jsonLd={serviceJsonLd("Construction Software Automation", "Automation and software integrations for WA construction businesses.", "/construction-software-integrations")}
+      />
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.86)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
         <div className="construction-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>
@@ -136,7 +143,7 @@ const ConstructionSoftwareIntegrations = () => {
               Built around the tools you already use: {tools.join(", ")}.
             </p>
             <p style={{ margin: "12px 0 0", color: "#6A5F4E", fontSize: 15.5, lineHeight: 1.55, maxWidth: "72ch" }}>
-              Built by an ex-cybersecurity professional — your data and login credentials are handled carefully, not passed around.
+              Built by an ex-cybersecurity professional - your data and login credentials are handled carefully, not passed around.
             </p>
           </div>
           <aside className="construction-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)", minWidth: 0, boxSizing: "border-box" }}>
@@ -207,7 +214,7 @@ const ConstructionSoftwareIntegrations = () => {
             ))}
           </div>
           <p style={{ margin: "24px 0 0", color: "#574F42", fontSize: 16.5, lineHeight: 1.6, maxWidth: "66ch" }}>
-            I've already built integrations connecting tools like Simpro, Xero, Procore and MYOB — so you're not paying for someone to figure it out from scratch.
+            I've already built integrations connecting tools like Simpro, Xero, Procore and MYOB - so you're not paying for someone to figure it out from scratch.
           </p>
         </div>
       </section>

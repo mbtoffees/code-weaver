@@ -31,7 +31,7 @@ const BackgroundSection = () => {
             </p>
 
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
-              Recent builds span construction workflow automation, racehorse sport-science operations, and accounting/tax data collection — different industries, same pattern: take the manual process seriously and turn it into reliable software.
+              Recent builds span construction workflow automation, racehorse sport-science operations, and accounting/tax data collection - different industries, same pattern: take the manual process seriously and turn it into reliable software.
             </p>
           </div>
         </div>

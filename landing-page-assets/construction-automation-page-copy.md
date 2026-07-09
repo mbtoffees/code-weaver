@@ -108,7 +108,7 @@ Flag missing fields, duplicates, inconsistent job details and other issues while
 
 #### Use AI where it actually helps
 
-Use AI for classification, summaries, first-pass checks and review queues — with humans approving important work.
+Use AI for classification, summaries, first-pass checks and review queues - with humans approving important work.
 
 #### Build safe internal tools
 

@@ -54,7 +54,7 @@ const HeroSection = () => {
               <div className="grid gap-5 sm:grid-cols-[0.85fr_1.15fr] lg:grid-cols-1 xl:grid-cols-[0.85fr_1.15fr]">
                 <div className="relative min-h-64 overflow-hidden rounded-2xl border border-border bg-secondary">
                   <img
-                    src="/max-brooker.jpg"
+                    src="/max-brooker-640.webp"
                     alt="Max Brooker"
                     className="absolute inset-0 h-full w-full object-cover object-top"
                   />

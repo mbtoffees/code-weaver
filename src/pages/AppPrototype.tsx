@@ -138,7 +138,7 @@ const AppPrototype = () => {
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(246,246,241,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #DEDFD8" }}>
         <div className="home-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#1A1C20" }}>
-            <img className="home-header-logo" src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, objectFit: "contain" }} />
+            <img className="home-header-logo" src="/brooker-mark-160.webp" alt="" style={{ width: 58, height: 58, objectFit: "contain" }} />
             <span className="home-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 750, fontSize: 20 }}>Brooker Systems</span>
           </a>
           <nav className="home-header-nav" style={{ display: "flex", alignItems: "center", gap: 14, fontSize: 14, fontWeight: 700 }}>
@@ -173,7 +173,7 @@ const AppPrototype = () => {
 
           <aside className="home-profile-card" style={{ background: "#FFFFFF", border: "1px solid #DADDD6", borderRadius: 8, padding: 24, boxShadow: "0 24px 55px -42px rgba(26,28,32,0.45)" }}>
             <div className="home-profile-row" style={{ display: "grid", gridTemplateColumns: "132px minmax(0, 1fr)", gap: 20, alignItems: "center", marginBottom: 22 }}>
-              <img className="home-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 132, height: 132, borderRadius: 8, objectFit: "cover", objectPosition: "center 24%", border: "1px solid #D7D9D2" }} />
+              <img className="home-profile-image" src="/max-brooker-640.webp" alt="Max Brooker" style={{ width: 132, height: 132, borderRadius: 8, objectFit: "cover", objectPosition: "center 24%", border: "1px solid #D7D9D2" }} />
               <div>
                 <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 8px" }}>Max Brooker</p>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 28, lineHeight: 1.05 }}>Cyber security engineer, software builder.</p>
@@ -297,7 +297,7 @@ const AppPrototype = () => {
       <footer style={{ background: "#1A1C20", color: "#ACB7B0" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "40px 28px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 44, height: 44, objectFit: "contain" }} />
+            <img src="/brooker-mark-160.webp" alt="" style={{ width: 44, height: 44, objectFit: "contain" }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 17, color: "#FFFFFF" }}>Brooker Systems</span>
           </div>
           <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Perth, Western Australia</p>

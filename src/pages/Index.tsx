@@ -92,7 +92,7 @@ const Index = () => {
 
           <aside className="home-profile-card" style={{ background: "#FFFFFF", border: "1px solid #DADDD6", borderRadius: 8, padding: 24, boxShadow: "0 24px 55px -42px rgba(26,28,32,0.45)" }}>
             <div className="home-profile-row" style={{ display: "grid", gridTemplateColumns: "132px minmax(0, 1fr)", gap: 20, alignItems: "center", marginBottom: 22 }}>
-              <img className="home-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 132, height: 132, borderRadius: 8, objectFit: "cover", objectPosition: "center 24%", border: "1px solid #D7D9D2" }} />
+              <img className="home-profile-image" src="/max-brooker-640.webp" alt="Max Brooker" style={{ width: 132, height: 132, borderRadius: 8, objectFit: "cover", objectPosition: "center 24%", border: "1px solid #D7D9D2" }} />
               <div>
                 <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 8px" }}>Max Brooker</p>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 28, letterSpacing: "0", lineHeight: 1.05 }}>Brooker Systems</p>
@@ -196,7 +196,7 @@ const Index = () => {
       <footer style={{ background: "#1A1C20", color: "#ACB7B0" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "40px 28px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 44, height: 44, objectFit: "contain" }} />
+            <img src="/brooker-mark-160.webp" alt="" style={{ width: 44, height: 44, objectFit: "contain" }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, fontSize: 17, color: "#FFFFFF" }}>Brooker Systems</span>
           </div>
           <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Perth, Western Australia</p>

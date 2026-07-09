@@ -15,7 +15,7 @@ const SiteHeader = () => {
     <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(246,246,241,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #DEDFD8" }}>
       <div className="home-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
         <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#1A1C20" }}>
-          <img className="home-header-logo" src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, objectFit: "contain" }} />
+          <img className="home-header-logo" src="/brooker-mark-160.webp" alt="" style={{ width: 58, height: 58, objectFit: "contain" }} />
           <span className="home-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 750, fontSize: 20, letterSpacing: "0" }}>Brooker Systems</span>
         </a>
 

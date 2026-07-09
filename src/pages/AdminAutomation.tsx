@@ -113,7 +113,7 @@ const AdminAutomation = () => {
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(244,238,227,0.86)", backdropFilter: "blur(12px)", borderBottom: "1px solid #E7DECE" }}>
         <div className="admin-header-inner" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 28px", height: 82, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15" }}>
-            <img className="admin-header-logo" src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, borderRadius: 0, objectFit: "contain" }} />
+            <img className="admin-header-logo" src="/brooker-mark-160.webp" alt="" style={{ width: 58, height: 58, borderRadius: 0, objectFit: "contain" }} />
             <span className="admin-header-name" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
           <a className="admin-header-cta" href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#C44E1E", color: "#FBF7EF", textDecoration: "none", fontWeight: 600, fontSize: 15, padding: "10px 18px", borderRadius: 10 }}>Get in touch</a>
@@ -137,7 +137,7 @@ const AdminAutomation = () => {
           <aside className="admin-profile-card" style={{ background: "#FFFFFF", border: "1px solid #EFE6D6", borderRadius: 24, padding: 28, boxShadow: "0 24px 60px -40px rgba(33,28,21,0.45)" }}>
             <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>// who am I</p>
             <div className="admin-profile-row" style={{ display: "flex", alignItems: "center", gap: 24, marginBottom: 24 }}>
-              <img className="admin-profile-image" src="/max-brooker.jpg" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
+              <img className="admin-profile-image" src="/max-brooker-640.webp" alt="Max Brooker" style={{ width: 168, height: 168, borderRadius: 30, objectFit: "cover", objectPosition: "top", border: "1px solid #E7DECE" }} />
               <div>
                 <p style={{ margin: 0, fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 30, letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>Max Brooker</p>
                 <p style={{ margin: "6px 0 0", color: "#7C715F", fontSize: 17, lineHeight: 1.45 }}>Cyber security engineer, software builder and automation expert.</p>
@@ -263,7 +263,7 @@ const AdminAutomation = () => {
       <footer style={{ background: "#211C15", color: "#A89B86" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 28px", display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 46, height: 46, borderRadius: 0, objectFit: "contain" }} />
+            <img src="/brooker-mark-160.webp" alt="" style={{ width: 46, height: 46, borderRadius: 0, objectFit: "contain" }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 17, color: "#F4EEE3" }}>Brooker Systems</span>
           </div>
           <p style={{ margin: 0, fontSize: 14, fontFamily: "'Spline Sans Mono', monospace" }}>Based in Perth, working with Australian businesses</p>

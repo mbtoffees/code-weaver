@@ -14,7 +14,7 @@ const BackgroundSection = () => {
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center mb-10">
             <img
-              src="/max-brooker.jpg"
+              src="/max-brooker-640.webp"
               alt="Max Brooker"
               className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover object-top shadow-lg ring-4 ring-primary/10"
             />

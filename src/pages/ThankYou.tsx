@@ -4,7 +4,7 @@ const ThankYou = () => {
       <section style={{ width: "100%" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", padding: "80px 28px" }}>
           <a href="/" style={{ display: "inline-flex", alignItems: "center", gap: 11, textDecoration: "none", color: "#211C15", marginBottom: 42 }}>
-            <img src="/brooker-mark.png" alt="" style={{ width: 58, height: 58, borderRadius: 0, objectFit: "contain" }} />
+            <img src="/brooker-mark-160.webp" alt="" style={{ width: 58, height: 58, borderRadius: 0, objectFit: "contain" }} />
             <span style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.01em" }}>Brooker Systems</span>
           </a>
           <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 500, color: "#C44E1E", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 18px" }}>Message sent</p>

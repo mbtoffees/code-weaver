@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
-const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
+const CONTACT_EMAIL = "max@brookersystems.com.au";
 
 type ContactFormSectionProps = {
   source?: string;
@@ -30,30 +30,24 @@ const ContactFormSection = ({
   const [error, setError] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSending(true);
     setError(false);
 
-    try {
-      const res = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          message: `[${source}]\n\n${formData.message}`,
-        }),
-      });
+    const body = [
+      `Source: ${source}`,
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      formData.phone ? `Phone: ${formData.phone}` : "Phone: not provided",
+      "",
+      formData.message,
+    ].join("\n");
 
-      if (!res.ok) throw new Error("Failed to send");
-
-      setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    } catch {
-      setError(true);
-    } finally {
-      setSending(false);
-    }
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(source)}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setSending(false);
   };
 
   return (

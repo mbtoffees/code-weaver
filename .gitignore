@@ -23,7 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.vercel
 
 # Local scratch exports/previews
 imported-brooker-design/

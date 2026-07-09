@@ -2,7 +2,7 @@ import { FormEvent, useState } from "react";
 import SEO, { serviceJsonLd } from "@/components/SEO";
 
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
-const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
+const CONTACT_EMAIL = "max@brookersystems.com.au";
 const GOOGLE_ADS_LEAD_CONVERSION = "AW-18270478625/Sp1XCPPchcUcEKHChYhE";
 
 declare global {
@@ -104,27 +104,19 @@ const AppPrototype = () => {
     setSending(true);
     setError(false);
 
-    try {
-      const res = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          message: `[App prototype enquiry]\n\n${formData.message}`,
-        }),
-      });
-
-      if (!res.ok) throw new Error("Failed to send");
-
-      await trackLeadConversion();
-      setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      window.location.assign("/thank-you");
-    } catch {
-      setError(true);
-    } finally {
-      setSending(false);
-    }
+    await trackLeadConversion();
+    const body = [
+      "Source: App prototype enquiry",
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      formData.phone ? `Phone: ${formData.phone}` : "Phone: not provided",
+      "",
+      formData.message,
+    ].join("\n");
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("App prototype enquiry")}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setSending(false);
   };
 
   return (

@@ -70,7 +70,7 @@ const inputStyle = {
   outline: "none",
 } as const;
 
-const API_URL = import.meta.env.VITE_API_URL || "https://code-weaver-nine.vercel.app";
+const CONTACT_EMAIL = "max@brookersystems.com.au";
 
 const AdminAutomation = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -78,28 +78,23 @@ const AdminAutomation = () => {
   const [error, setError] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSending(true);
     setError(false);
 
-    try {
-      const res = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error("Failed to send");
-
-      setSubmitted(true);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      window.location.assign("/thank-you");
-    } catch {
-      setError(true);
-    } finally {
-      setSending(false);
-    }
+    const body = [
+      "Source: Admin automation enquiry",
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      formData.phone ? `Phone: ${formData.phone}` : "Phone: not provided",
+      "",
+      formData.message,
+    ].join("\n");
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Admin automation enquiry")}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setSending(false);
   };
 
   return (

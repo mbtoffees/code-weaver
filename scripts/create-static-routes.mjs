@@ -40,12 +40,7 @@ const routes = [
     description: 'Brooker Systems automates repeated admin, reporting, data movement and system integration work for Australian businesses.',
     service: 'Automations',
   },
-  {
-    route: 'internal-tools',
-    title: 'Apps for Business Workflows | Brooker Systems',
-    description: 'Brooker Systems builds web apps, portals, product builds and internal tools for Australian businesses that need practical software.',
-    service: 'Apps',
-  },
+
   {
     route: 'construction-software-integrations',
     title: 'Construction Software Automation WA | Brooker Systems',

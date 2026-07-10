@@ -82,7 +82,7 @@ const Index = () => {
               I build software systems for your business.
             </h1>
             <p style={{ fontSize: "clamp(1.08rem,1.6vw,1.28rem)", lineHeight: 1.58, color: "#4B535C", margin: "24px 0 0", maxWidth: "68ch" }}>
-              I help businesses turn ideas, processes and repeated work into apps, agents and automations. Internal tools sit inside the apps work. The goal is simple: useful software that saves time, improves handoffs and gives your team room to scale.
+              I help businesses turn ideas, processes and repeated work into apps, agents and automations. The goal is simple: useful software that saves time, improves handoffs and gives your team room to scale.
             </p>
             <div className="home-hero-actions" style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 32 }}>
               <a className="home-hero-action" href={BOOKING_URL} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#B64A22", color: "#FFFFFF", textDecoration: "none", fontWeight: 750, fontSize: 16, padding: "15px 22px", borderRadius: 8, boxShadow: "0 14px 28px -18px rgba(182,74,34,0.8)" }}>Book a 20-minute call</a>

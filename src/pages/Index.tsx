@@ -45,20 +45,20 @@ const publicWork = [
   {
     name: "Equilytics",
     href: "https://equilytics.com.au",
-    label: "Designed and built end to end",
-    copy: "I designed and coded the complete software platform, bringing training plans, performance data and stable operations into one working system.",
+    label: "Sport science platform",
+    copy: "Training plans, performance data and daily stable operations brought together in one practical system for horse training and conditioning.",
   },
   {
     name: "Client Ready Solutions",
     href: "https://clientreadysolutions.com.au",
-    label: "Software system // ongoing build",
-    copy: "I designed and built the full digital system, not just the website, and continue to develop the software behind the client-readiness service.",
+    label: "Accounting software // active development",
+    copy: "Gather turns end-of-financial-year data collection into a structured client workflow and produces workpapers ready for compliance—the first product in a growing suite for accounting firms.",
   },
   {
     name: "Vocabull",
     href: "https://vocabull.app",
-    label: "Designed and built end to end",
-    copy: "I designed and coded the complete software product, including its accounts, data flows and focused interactive experience.",
+    label: "Vocabulary learning app",
+    copy: "Turns a Kindle Vocabulary Builder word list into quick practice games that help readers remember the words they looked up.",
   },
 ];
 
@@ -174,7 +174,7 @@ const Index = () => {
             <div>
               <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Public products</p>
               <h2 className="home-single-line-heading" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
-                Software products I've designed and coded end to end.
+                Software products I've built.
               </h2>
             </div>
           </div>

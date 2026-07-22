@@ -44,20 +44,20 @@ const projects = [
   {
     name: "Equilytics",
     href: "https://equilytics.com.au",
-    label: "Sports science platform",
-    copy: "A horse performance platform using clever data analytics and AI to turn training plans, performance data and stable workflows into a usable product experience.",
+    label: "Designed and built end to end",
+    copy: "I designed and coded the complete horse-performance platform, using data analytics and AI to connect training plans, performance data and stable workflows.",
   },
   {
     name: "Client Ready Solutions",
     href: "https://clientreadysolutions.com.au",
-    label: "Accounting software",
-    copy: "A polished, conversion-focused site built around trust, clarity and making the next enquiry easy.",
+    label: "Software system // ongoing build",
+    copy: "I designed and built the full digital system, not just the website, and continue to develop the software behind the client-readiness service.",
   },
   {
     name: "Vocabull",
     href: "https://vocabull.app",
-    label: "Niche software product",
-    copy: "A niche app idea turned into a live interactive product with accounts, data flows and a polished user experience.",
+    label: "Designed and built end to end",
+    copy: "I designed and coded the complete software product, including its accounts, data flows and polished interactive experience.",
   },
 ];
 

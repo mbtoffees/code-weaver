@@ -45,20 +45,20 @@ const publicWork = [
   {
     name: "Equilytics",
     href: "https://equilytics.com.au",
-    label: "Custom app",
-    copy: "A specialist platform for training plans, performance data and stable operations.",
+    label: "Designed and built end to end",
+    copy: "I designed and coded the complete software platform, bringing training plans, performance data and stable operations into one working system.",
   },
   {
     name: "Client Ready Solutions",
     href: "https://clientreadysolutions.com.au",
-    label: "Business website",
-    copy: "A polished site for an accounting software and client-readiness service.",
+    label: "Software system // ongoing build",
+    copy: "I designed and built the full digital system, not just the website, and continue to develop the software behind the client-readiness service.",
   },
   {
     name: "Vocabull",
     href: "https://vocabull.app",
-    label: "Software product",
-    copy: "A live interactive product with accounts, data flows and a focused user experience.",
+    label: "Designed and built end to end",
+    copy: "I designed and coded the complete software product, including its accounts, data flows and focused interactive experience.",
   },
 ];
 
@@ -174,7 +174,7 @@ const Index = () => {
             <div>
               <p style={{ fontFamily: "'Spline Sans Mono', monospace", fontSize: 13, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 16px" }}>Public products</p>
               <h2 className="home-single-line-heading" style={{ fontFamily: "'Hanken Grotesk', system-ui, sans-serif", fontWeight: 780, color: "#1A1C20", fontSize: "clamp(1.9rem,3.6vw,3rem)", lineHeight: 1.08, letterSpacing: "0", margin: 0 }}>
-                Here are some public examples of the work I'm doing.
+                Software products I've designed and coded end to end.
               </h2>
             </div>
           </div>

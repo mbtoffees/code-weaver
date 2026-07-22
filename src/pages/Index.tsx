@@ -52,8 +52,8 @@ const publicWork = [
   {
     name: "Client Ready Solutions",
     href: "https://clientreadysolutions.com.au",
-    label: "Accounting software // active development",
-    copy: "Gather turns end-of-financial-year data collection into a structured client workflow and produces workpapers ready for compliance—the first product in a growing suite for accounting firms.",
+    label: "Accounting software",
+    copy: "I co-founded Client Ready Solutions with a friend to build software for accounting firms. Our first product, Gather, turns end-of-financial-year data collection into a structured client workflow and produces workpapers ready for compliance.",
   },
   {
     name: "Vocabull",

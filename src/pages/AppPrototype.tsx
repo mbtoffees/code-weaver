@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
-import SEO, { serviceJsonLd } from "@/components/SEO";
+import SEO from "@/components/SEO";
+import { serviceJsonLd } from "@/components/seoData";
 
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
 const CONTACT_EMAIL = "max@brookersystems.com.au";

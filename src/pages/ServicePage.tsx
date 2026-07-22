@@ -1,6 +1,7 @@
 import SiteHeader from "@/components/SiteHeader";
 import ContactFormSection from "@/components/ContactFormSection";
-import SEO, { serviceJsonLd } from "@/components/SEO";
+import SEO from "@/components/SEO";
+import { serviceJsonLd } from "@/components/seoData";
 
 export type ServicePageContent = {
   path: string;

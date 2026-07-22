@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
-import SEO, { serviceJsonLd } from "@/components/SEO";
+import SEO from "@/components/SEO";
+import { serviceJsonLd } from "@/components/seoData";
 
 const problemExamples = [
   "Someone re-types data from one system into another every day.",

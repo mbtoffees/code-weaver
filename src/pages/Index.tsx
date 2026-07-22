@@ -1,6 +1,7 @@
 import SiteHeader from "@/components/SiteHeader";
 import ContactFormSection from "@/components/ContactFormSection";
-import SEO, { businessJsonLd } from "@/components/SEO";
+import SEO from "@/components/SEO";
+import { businessJsonLd } from "@/components/seoData";
 
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
 

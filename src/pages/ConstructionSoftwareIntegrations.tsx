@@ -37,7 +37,7 @@ const workSteps = [
   },
 ];
 
-const tools = ["Procore", "Buildertrend", "Simpro", "Xero", "MYOB", "Rapid Global", "Zoho", "Power Automate", "job-costing systems", "spreadsheets", "email"];
+const tools = ["Procore", "Buildertrend", "Simpro", "Xero", "MYOB", "Rapid Global", "job-costing systems", "spreadsheets", "email"];
 
 const inputStyle = {
   fontFamily: "inherit",

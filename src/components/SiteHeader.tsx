@@ -3,6 +3,7 @@ import { useState } from "react";
 const BOOKING_URL = import.meta.env.VITE_BOOKING_URL || "https://cal.com/maxbrooker/20-min-meeting";
 
 const services = [
+  { label: "Construction systems", href: "/construction-software-integrations", copy: "Integrations and automation for contractors — Simpro, Procore, Xero, Rapid Global" },
   { label: "Apps", href: "/apps", copy: "Web apps, portals, products and internal tools" },
   { label: "Agents", href: "/agents", copy: "AI-assisted workflows and operational agents" },
   { label: "Automations", href: "/automations", copy: "Business processes, integrations and repeated work" },

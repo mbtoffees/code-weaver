@@ -20,6 +20,8 @@ const pillars = [
   },
 ];
 
+const systems = ["Simpro", "Procore", "Rapid Global", "Xero", "Zoho", "Power Automate", "MYOB", "custom APIs"];
+
 const examples = [
   "A business process becomes a small internal app instead of another spreadsheet, inbox thread or manual checklist.",
   "An AI workflow reads documents, extracts useful fields, checks them against rules and sends edge cases to a person.",
@@ -106,6 +108,15 @@ const Index = () => {
               </p>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section style={{ background: "#FFFFFF", borderBottom: "1px solid #DEDFD8" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "22px 28px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "10px 20px" }}>
+          <p style={{ margin: 0, fontFamily: "'Spline Sans Mono', monospace", fontSize: 12, fontWeight: 650, color: "#0E6C5D", letterSpacing: "0.08em", textTransform: "uppercase" }}>Systems I work with</p>
+          {systems.map((system) => (
+            <span key={system} style={{ color: "#4B535C", fontSize: 15, fontWeight: 650 }}>{system}</span>
+          ))}
         </div>
       </section>
 
